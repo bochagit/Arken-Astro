@@ -1,0 +1,41 @@
+---
+const { title } = Astro.props
+import '../styles/global.css'
+import '../styles/fonts.css'
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>{title}</title>
+
+		<link rel="icon" href="/Fotos/Logo.webp" type="image/webp" />
+
+		<meta
+			name="description"
+			content="Pagina web de Arken Games, editorial de juegos de mesa en Argentina."
+		/>
+		<meta name="author" content="Gonzalo Cardozo - github.com/bochagit" />
+
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CKXG8YDXR0"></script>
+		<script is:inline>
+			/* eslint-disable */
+			window.dataLayer = window.dataLayer || []
+
+			function gtag() {
+				dataLayer.push(arguments)
+			}
+
+			gtag('js', new Date())
+			gtag('config', 'G-CKXG8YDXR0')
+			/* eslint-enable */
+		</script>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

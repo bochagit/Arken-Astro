@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'Spectral SC';
+	src: url(/Fonts/Spectral_SC/SpectralSC-SemiBold.ttf) format('truetype');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Lora';
+	src: url(/Fonts/Lora/Lora-Regular.ttf) format('truetype');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Knockout';
+	src: url(/Fonts/Knockout/Knockout%20HTF72-FullCruiserwt%20Regular.otf) format('opentype');
+	font-weight: 400;
+}

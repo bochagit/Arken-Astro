@@ -1,0 +1,460 @@
+/* ----- JUEGOS SECTION ----- */
+
+.juegos {
+    width: 100%;
+    height: auto;
+}
+
+.juegos__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.juegos__image {
+    width: 80vw;
+    height: auto;
+    filter: drop-shadow(0 0 20px #000);
+}
+
+.juegos__title {
+    color: var(--ghost-white);
+    font-family: 'Spectral SC';
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ----- JUEGOS QUERIES ----- */
+
+@media screen and (min-width: 721px) {
+    .juegos__title {
+        display: none;
+    }
+
+    .juegos__wrapper {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .juegos__image {
+        width: 35vw;
+        position: relative;
+        transition: width .2s, filter .2s;
+    }
+
+    .juegos__image:hover {
+        width: 40vw;
+        filter: drop-shadow(0 0 50px var(--space-cadet));
+    }
+
+    .juegos__image:active {
+        filter: grayscale(1);
+    }
+}
+
+/* ----- JUEGOS ENDS ----- */
+
+/* ----- ROBIN HOOD VS. BIG FOOT PAGE ----- */
+
+/* ----- TITLE & BANNER ----- */
+
+.title {
+    color: var(--hunyadi-yellow);
+    font-size: 1rem;
+    font-family: 'Spectral SC';
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.banner__container {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+}
+
+/* ----- TITLE & BANNER QUERIES ----- */
+
+@media screen and (min-width: 721px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .banner__container {
+        width: 70vw;
+    }
+}
+
+/* ----- TITLE & BANNER ENDS ----- */
+
+/* ----- MAIN SECTION ----- */
+
+.main {
+    color: var(--ghost-white);
+    font-family: 'Lora';
+    font-size: .8rem;
+    width: 95vw;
+    margin: auto;
+    text-wrap: pretty;
+}
+
+.main__text {
+    margin: 2rem 0;
+}
+
+.main__icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main__icon-item {
+    list-style: none;
+}
+
+.main__icon-icon {
+    width: 20px;
+    height: auto;
+    fill: var(--hunyadi-yellow);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.--players {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.main__title {
+    font-family: 'Spectral SC';
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-wrap: balance;
+    margin: 4.2rem 0 1.2rem 0;
+    color: var(--hunyadi-yellow);
+}
+
+.main__description-item {
+    list-style: none;
+}
+
+.--img {
+    width: 100%;
+    margin: auto;
+    filter: drop-shadow(0 0 2px var(--ghost-white));
+    transition: opacity .2s, filter .2s, transform .2s;
+}
+
+.main__description-img {
+    width: 100%;
+    height: auto;
+}
+
+.--img:hover {
+    opacity: .8;
+    filter: drop-shadow(0 0 5px var(--hunyadi-yellow));
+    transform: translateY(-10px);
+}
+
+.box-content {
+    list-style: square;
+    margin: 1rem;
+}
+
+.box__container {
+    display: flex;
+    flex: 1;
+    width: auto;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.box-content__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box__box {
+    width: 20%;
+    height: auto;
+    filter: drop-shadow(0 0 2px var(--ghost-white));
+    transition: opacity .2s, filter .2s, transform .2s;
+}
+
+.box__box:hover {
+    opacity: .8;
+    filter: drop-shadow(0 0 5px var(--hunyadi-yellow));
+    transform: translateY(-10px);
+}
+
+/* ----- MAIN QUERIES ----- */
+
+@media screen and (min-width: 721px) {
+    .main {
+        width: 70vw;
+        font-size: 1rem;
+    }
+
+    .main__icons {
+        width: 70vw;
+        margin: 1.5rem 0;
+    }
+
+    .main__title {
+        font-size: 1.2rem;
+    }
+
+    .--maps {
+        display: grid;
+        grid-template-areas:
+            "text img"
+            "text img";
+        grid-template-columns: 45% 55%;
+    }
+
+    .--img {
+        width: 100%;
+        grid-column: span 2;
+        grid-area: img;
+    }
+}
+
+/* ----- MAIN ENDS ----- */
+
+/* ----- GALLERY SECTION ----- */
+
+.gallery__title {
+    color: var(--ghost-white);
+    font-family: 'Spectral SC';
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.gallery__title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery__title-line {
+    width: 30%;
+    height: 2px;
+    background-color: var(--hunyadi-yellow);
+}
+
+.gallery {
+    display: flex;
+    width: 95vw;
+    height: 40vh;
+    margin: auto;
+}
+
+.gallery img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .6;
+    transition: .5s ease;
+}
+
+.gallery img:hover {
+    width: 70%;
+    opacity: 1;
+    filter: contrast(1.2);
+}
+
+.photo__copyright {
+    color: #888;
+    font-size: .5rem;
+    font-family: monospace;
+    margin-left: 5vw;
+}
+
+/* ----- GALLERY QUERIES ----- */
+
+@media screen and (min-width: 721px) {
+    .gallery {
+        width: 60vw;
+        height: 70vh;
+    }
+
+    .photo__copyright {
+        font-size: .8rem;
+        margin-left: 20vw;
+    }
+}
+
+/* ----- GALLERY ENDS ----- */
+
+/* ----- SIMILAR GAMES SECTION ----- */
+
+.similar__title {
+    color: var(--ghost-white);
+    font-family: 'Spectral SC';
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.similar__title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.similar__title-line {
+    width: 12%;
+    height: 2px;
+    background-color: var(--hunyadi-yellow);
+}
+
+.similar__game-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.similar__game {
+    display: flex;
+    flex-direction: row;
+    width: 12rem;
+    height: 20rem;
+    margin: auto;
+    box-shadow: 0 0 10px var(--blue-munsell);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 1.2rem;
+    transition: box-shadow .3s;
+}
+
+.similar__game:hover {
+    box-shadow: 0 0 20px var(--ghost-white);
+}
+
+.similar__game-box {
+    width: 100%;
+}
+
+.similar__game-name {
+    color: var(--ghost-white);
+    text-align: center;
+    font-family: 'Lora';
+    font-size: .8rem;
+    width: 100%;
+}
+
+.similar__game-link:is(:visited, :active, :focus, :link) {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.slider__nav a:is(:visited, :active, :focus, :link) {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* ----- SIMILAR GAMES QUERIES ----- */
+
+@media screen and (min-width: 721px) {
+    .similar__title-line {
+        width: 30%;
+    }
+
+    .similar__game-container {
+        width: 50%;
+    }
+}
+
+/* ----- SIMILAR GAMES ENDS ----- */
+
+/* ----- VOL 1 PAGE ----- */
+
+.heroes__container {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.heroe__image {
+    max-width: 20%;
+    height: auto;
+    transition: opacity .2s, filter .2s, transform .2s;
+}
+
+.heroe__image:first-child:hover {
+    opacity: .8;
+    filter: drop-shadow(0 0 5px var(--hunyadi-yellow));
+    transform: translateY(-10px);
+}
+
+.heroe__image:nth-child(2):hover {
+    opacity: .8;
+    filter: drop-shadow(0 0 5px var(--hunyadi-yellow));
+    transform: translateY(-10px);
+}
+
+.heroe__image:nth-child(3):hover {
+    opacity: .8;
+    filter: drop-shadow(0 0 5px var(--hunyadi-yellow));
+    transform: translateY(-10px);
+}
+
+.heroe__image:nth-child(4):hover {
+    opacity: .8;
+    filter: drop-shadow(0 0 5px var(--hunyadi-yellow));
+    transform: translateY(-10px);
+}
+
+/* ----- MODAL IMAGES ----- */
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal__content {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.image-modal__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: var(--ghost-white);
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* ----- MODAL IMAGES ENDS ----- */
