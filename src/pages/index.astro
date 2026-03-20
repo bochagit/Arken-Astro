@@ -1,177 +1,23 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Main from '../components/Main.astro'
+import About from '../components/About.astro'
+import Contact from '../components/Contact.astro'
 ---
 
 <MainLayout title="Arken Games">
 	<div class="wallpaper__overlay">
-		<!-- <div class="overlay--black"></div> -->
-		<header class="header">
-			<input type="checkbox" id="menu-toggle" class="header__checkbox" />
-			<label for="menu-toggle" class="header__menu-toggle" role="button"
-				><img src="/Fotos/Nav-icon.webp" alt="Icono abrir menu" class="menu-toggle__icon" /></label
-			>
-			<nav class="header__nav">
-				<ul class="header__nav-list">
-					<li class="header__nav-item">
-						<a href="#inicio">Inicio</a>
-					</li>
-					<li class="header__nav-item">
-						<a href="juegos.html">Juegos</a>
-					</li>
-					<div class="header__logo-container">
-						<img
-							src="/Fotos/Logo.webp"
-							alt="Logo Arken Games"
-							class="header__logo"
-							style="view-transition-name: arken-logo"
-						/>
-					</div>
-					<li class="header__nav-item">
-						<a href="#quienes-somos">Quienes somos</a>
-					</li>
-					<li class="header__nav-item">
-						<a href="#contact">Contacto</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main class="slider" id="inicio">
-			<div class="slider__progress-bar">
-				<div class="slider__progress"></div>
-			</div>
-			<div class="slider__wrapper" id="sliderWrapper">
-				<div class="slider__item">
-					<a href="Vol1.html">
-						<img
-							src="/Fotos/Banner_volume-one.webp"
-							alt="Banner of Unmatched: Battle of legends Volume one game"
-						/>
-						<div class="slider__button">
-							<a href="Vol1.html" class="slider__button-link">Más información</a>
-						</div>
-					</a>
-				</div>
-				<div class="slider__item">
-					<a href="RHvsBF.html">
-						<img
-							src="/Fotos/Banner_RHvsBF.webp"
-							alt="Banner of Unmatched: Robin Hood vs Bigfoot game"
-						/>
-						<div class="slider__button">
-							<a href="RHvsBF.html" class="slider__button-link">Más información</a>
-						</div>
-					</a>
-				</div>
-				<div class="slider__item">
-					<a href="Sunrise.html">
-						<img src="/Fotos/Banner_Sunrise.webp" alt="Banner of Sunrise Sunset" />
-						<div class="slider__button">
-							<a href="Sunrise.html" class="slider__button-link">Más información</a>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="slider__nav">
-				<a href="javascript:void(0)"></a>
-				<a href="javascript:void(0)"></a>
-				<a href="javascript:void(0)"></a>
-			</div>
-		</main>
-		<section class="about" id="quienes-somos">
-			<div class="about__logo-container">
-				<img src="/Fotos/Logo.webp" alt="Arken Games Logo" class="about__logo" />
-			</div>
-			<div class="about__text">
-				<h2 class="about__title">Quienes somos</h2>
-				<p>
-					Arken Games es una editorial Argentina de juegos de mesa que cree que jugar es mucho más
-					que entretenerse: es conectar, crear y compartir momentos reales.
-				</p>
-				<p>
-					Publicamos juegos pensados para disfrutar en familia o entre amigos, cuidando cada detalle
-					para brindar experiencias memorables.
-				</p>
-			</div>
-		</section>
-		<section class="form" id="contact">
-			<div class="form__text-comercios">
-				<h2>Contacto</h2>
-				<h3>¿Tienes un local o punto de venta?</h3>
-				<p>
-					Si te interesa ofrecer nuestros productos, simplemente completá el formulario de contacto
-					para comercios y nos comunicaremos con vos a la brevedad.
-				</p>
-			</div>
-			<form class="form__form" id="contact-form">
-				<div class="form__input-container">
-					<label
-						>Nombre
-						<input type="text" id="name" placeholder="John Doe" required />
-					</label>
-				</div>
-				<div class="form__input-container">
-					<label
-						>Razón social
-						<input type="text" id="company" placeholder="Arken S.R.L" required />
-					</label>
-				</div>
-				<div class="form__input-container">
-					<label
-						>Teléfono
-						<input type="number" id="tel" placeholder="1134567890" required />
-					</label>
-				</div>
-				<div class="form__input-container">
-					<label
-						>Correo electrónico
-						<input type="email" id="email" placeholder="Arken@mail.com" required />
-					</label>
-				</div>
-				<div class="form__input-container">
-					<label
-						>Mensaje
-						<textarea id="message" placeholder="Escribe tu mensaje..."></textarea>
-					</label>
-				</div>
-				<div class="form__input-container">
-					<input type="submit" />
-				</div>
-			</form>
-		</section>
-		<footer class="footer">
-			<div class="footer__logo-container">
-				<img src="/Fotos/Logo.webp" alt="Arken Games Logo" class="footer__logo" />
-			</div>
-			<div class="footer__social-media">
-				<p>Enterate de todas nuestras novedades!</p>
-				<div class="footer__social-media-icons">
-					<a
-						href="https://www.instagram.com/arkengamesok/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<img
-							src="/Fotos/Instagram-icon.webp"
-							alt="Instagram Icon"
-							class="footer__social-icon"
-						/>
-					</a>
-					<a
-						href="https://www.facebook.com/profile.php?id=61576278540938"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<img src="/Fotos/Facebook-icon.webp" alt="Facebook Icon" class="footer__social-icon" />
-					</a>
-					<a href="https://wa.link/3omw9g" target="_blank" rel="noopener noreferrer">
-						<img src="/Fotos/Whatsapp-icon.webp" alt="WhatsApp icon" class="footer__social-icon" />
-					</a>
-				</div>
-			</div>
-			<div class="footer__text">
-				<p>&copy; 2025 Arken Games. Todos los derechos reservados.</p>
-			</div>
-		</footer>
+		<Header />
+
+		<Main />
+
+		<About />
+
+		<Contact />
+
+		<Footer />
 	</div>
 	<script is:inline src="/Scripts/slider.js"></script>
 	<script is:inline src="/Scripts/menu-toggle.js"></script>
