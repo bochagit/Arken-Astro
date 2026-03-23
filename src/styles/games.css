@@ -458,3 +458,32 @@
 }
 
 /* ----- MODAL IMAGES ENDS ----- */
+
+.main h2 {
+  font-family: 'Spectral SC';
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--hunyadi-yellow);
+  margin: 2.2rem 0 1rem 0;
+}
+
+.main p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  color: var(--ghost-white);
+}
+
+.main ul {
+  margin: 1rem 0 1rem 1.2rem;
+  color: var(--ghost-white);
+}
+
+.main li {
+  margin: 0.4rem 0;
+}
+
+@media screen and (min-width: 721px) {
+  .main h2 {
+    font-size: 1.2rem;
+  }
+}

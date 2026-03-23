@@ -1,0 +1,36 @@
+---
+import type { GetStaticPaths } from 'astro'
+import { getCollection, render, type CollectionEntry } from 'astro:content'
+import MainLayout from '../../layouts/MainLayout.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+import '../../styles/games.css'
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	const games = await getCollection('games')
+
+	return games.map((game) => ({
+		params: { slug: game.id },
+		props: { game }
+	}))
+}
+
+const { game } = Astro.props as { game: CollectionEntry<'games'> }
+const { Content } = await render(game)
+---
+
+<MainLayout title={game.data.title}>
+	<Header />
+
+	<h1 class="title">{game.data.title}</h1>
+
+	<div class="banner__container">
+		<img class="banner" src={game.data.banner} alt={game.data.title} />
+	</div>
+
+	<article class="main">
+		<Content />
+	</article>
+
+	<Footer />
+</MainLayout>
