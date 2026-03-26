@@ -7,7 +7,12 @@ const games = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		banner: z.string(),
-		gallery: z.array(z.string()).optional()
+		box: z.string(),
+		players: z.number(),
+		duration: z.number(),
+		age: z.string(),
+		gallery: z.array(z.string()).optional(),
+		relatedGames: z.array(z.string()).optional()
 	})
 })
 

@@ -1,10 +1,16 @@
 ---
 title: "Unmatched: Robin Hood vs. BigFoot"
 banner: "/Fotos/Juego_banner_RHvsBF.webp"
+box: "/Fotos/RHvsBF_caja.webp"
+players: 2
+duration: 20
+age: "9+"
 gallery: 
   - "/Fotos/RHvsBF_1.webp"
   - "/Fotos/RHvsBF_2.webp"
   - "/Fotos/RHvsBF_3.webp"
+relatedGames:
+  - "rh-vs-bf"
 ---
 
 **Arken Games** trae este enfrentamiento épico entre leyendas: el astuto **Robin Hood** contra el colosal **Bigfoot**, en una batalla asimétrica 1 contra 1 repleta de táctica, diversión y miniaturas.
@@ -29,13 +35,38 @@ Porque incluye **dos mapas exclusivos** (Sherwood Forest y Yukon), que no solo a
 
 ## - MAPAS -
 
-**Sherwood Forest:** un mapa repleto de árboles, rocas y arbustos que crean obstáculos naturales y zonas de cobertura, perfecto para duelos tácticos a distancia. Este entorno favorece el juego estratégico y la movilidad ágil de Robin Hood y sus bandidos, quienes pueden usar el terreno para flanquear y atacar desde puntos seguros. Los múltiples nichos y caminos permiten maniobras de emboscada y retiradas inteligentes.
-
-**Yukon:** un escenario más abierto, con menos obstáculos y grandes espacios para maniobrar, ideal para el estilo de juego agresivo y de choque directo de Bigfoot. La amplitud del terreno le permite aprovechar su gran movilidad para dominar el tablero, forzar encuentros y controlar las posiciones clave. Este mapa desafía a los jugadores a gestionar la velocidad y la potencia para imponerse en combate.
+<ul class="main__list-description --maps">
+  <li class="main__description-item main__text">
+      <p>
+          <strong>Sherwood Forest:</strong> un mapa repleto de árboles, rocas y arbustos que crean obstáculos naturales y zonas de cobertura, perfecto para duelos tácticos a distancia. Este entorno favorece el juego estratégico y la movilidad ágil de Robin Hood y sus bandidos, quienes pueden usar el terreno para flanquear y atacar desde puntos seguros. Los múltiples nichos y caminos permiten maniobras de emboscada y retiradas inteligentes.
+      </p>
+  </li>
+  <li class="main__description-item main__text">
+      <p>
+          <strong>Yukon:</strong> un escenario más abierto, con menos obstáculos y grandes espacios para maniobrar, ideal para el estilo de juego agresivo y de choque directo de Bigfoot. La amplitud del terreno le permite aprovechar su gran movilidad para dominar el tablero, forzar encuentros y controlar las posiciones clave. Este mapa desafía a los jugadores a gestionar la velocidad y la potencia para imponerse en combate.
+      </p>
+  </li>
+  <li class="main__description-item --img">
+      <img src="/Fotos/RHvsBF_mapa.webp" alt="Elementos del juego" class="main__description-img">
+  </li>
+</ul>
 
 ## - CONTENIDO DE LA CAJA -
 
-- 2 miniaturas pre-pintadas (Robin Hood y Bigfoot).
-- 2 mazos de 30 cartas (total 60 cartas).
-- 1 tablero doble cara: Sherwood Forest y Yukon.
-- 5 fichas de ayudante, 3 contadores de vida y reglamento completo.
+<div class="box-content__container">
+    <ul class="main__list-description">
+        <li class="main__description-item box-content">
+            <p>2 miniaturas pre-pintadas (Robin Hood y Bigfoot).</p>
+        </li>
+        <li class="main__description-item box-content">
+            <p>2 mazos de 30 cartas (total 60 cartas).</p>
+        </li>
+        <li class="main__description-item box-content">
+            <p>1 tablero doble cara: <strong>Sherwood Forest y Yukon.</strong></p>
+        </li>
+        <li class="main__description-item box-content">
+            <p>5 fichas de ayudante, 3 contadores de vida y reglamento completo.</p>
+        </li>
+    </ul>
+    <img src="/Fotos/RHvsBF_caja.webp" alt="Caja Unmatched: Robin Hood vs Bigfoot" class="box__box">
+</div>
