@@ -11,6 +11,7 @@ gallery:
   - "/Fotos/RHvsBF_3.webp"
 relatedGames:
   - "vol1"
+  - "sunrise"
 ---
 
 **Arken Games** trae este enfrentamiento épico entre leyendas: el astuto **Robin Hood** contra el colosal **Bigfoot**, en una batalla asimétrica 1 contra 1 repleta de táctica, diversión y miniaturas.
