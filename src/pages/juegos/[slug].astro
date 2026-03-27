@@ -23,7 +23,9 @@ interface Props {
 const { game, allGames } = Astro.props as Props
 const { Content } = await render(game)
 
-const relatedGamesList = game.data.relatedGames ? allGames.filter(g => game.data.relatedGames?.includes(g.id)) : []
+const relatedGamesList = game.data.relatedGames
+	? allGames.filter((g) => game.data.relatedGames?.includes(g.id))
+	: []
 ---
 
 <MainLayout title={game.data.title}>
@@ -103,41 +105,49 @@ const relatedGamesList = game.data.relatedGames ? allGames.filter(g => game.data
 			<Content />
 		</article>
 
-		{ game.data.gallery && game.data.gallery.length > 0 && (
-			<>
-				<div class="gallery__title-container">
-					<div class="gallery__title-line"></div>
-					<h2 class="gallery__title">Galería</h2>
-					<div class="gallery__title-line"></div>
-				</div>
-				<section class="gallery">
-					{game.data.gallery.map((photo) => (
-						<img src={photo} alt="Foto del juego" />
-					))}
-				</section>
-				<span class="photo__copyright">Photos by Board Game Shot</span>
-			</>
-		)}
+		{
+			game.data.gallery && game.data.gallery.length > 0 && (
+				<>
+					<div class="gallery__title-container">
+						<div class="gallery__title-line" />
+						<h2 class="gallery__title">Galería</h2>
+						<div class="gallery__title-line" />
+					</div>
+					<section class="gallery">
+						{game.data.gallery.map((photo) => (
+							<img src={photo} alt="Foto del juego" />
+						))}
+					</section>
+					<span class="photo__copyright">Photos by Board Game Shot</span>
+				</>
+			)
+		}
 
-		{relatedGamesList.length > 0 && (
-			<section class="similar">
+		{
+			relatedGamesList.length > 0 && (
+				<section class="similar">
 					<div class="similar__title-container">
-							<div class="similar__title-line"></div>
-							<h2 class="similar__title">Juegos relacionados</h2>
-							<div class="similar__title-line"></div>
+						<div class="similar__title-line" />
+						<h2 class="similar__title">Juegos relacionados</h2>
+						<div class="similar__title-line" />
 					</div>
 					<div class="similar__game-container">
-							{relatedGamesList.map((relatedGame) => (
-									<div class="similar__game">
-											<a href={`/juegos/${relatedGame.id}`} class="similar__game-link">
-													<img src={relatedGame.data.box} alt={relatedGame.data.title} class="similar__game-box" />
-													<p class="similar__game-name">{relatedGame.data.title}</p>
-											</a>
-									</div>
-							))}
+						{relatedGamesList.map((relatedGame) => (
+							<div class="similar__game">
+								<a href={`/juegos/${relatedGame.id}`} class="similar__game-link">
+									<img
+										src={relatedGame.data.box}
+										alt={relatedGame.data.title}
+										class="similar__game-box"
+									/>
+									<p class="similar__game-name">{relatedGame.data.title}</p>
+								</a>
+							</div>
+						))}
 					</div>
-			</section>
-		)}
+				</section>
+			)
+		}
 
 		<Footer />
 	</div>

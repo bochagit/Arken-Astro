@@ -329,10 +329,11 @@
 }
 
 .similar__game-container {
-    width: 100%;
+    width: 90%;
     margin: auto;
     display: flex;
     justify-content: center;
+    gap: 2rem
 }
 
 .similar__game {

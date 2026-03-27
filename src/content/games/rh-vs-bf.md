@@ -2,15 +2,15 @@
 title: "Unmatched: Robin Hood vs. BigFoot"
 banner: "/Fotos/Juego_banner_RHvsBF.webp"
 box: "/Fotos/RHvsBF_caja.webp"
-players: 2
-duration: 20
+players: "2"
+duration: "20"
 age: "9+"
 gallery: 
   - "/Fotos/RHvsBF_1.webp"
   - "/Fotos/RHvsBF_2.webp"
   - "/Fotos/RHvsBF_3.webp"
 relatedGames:
-  - "rh-vs-bf"
+  - "vol1"
 ---
 
 **Arken Games** trae este enfrentamiento épico entre leyendas: el astuto **Robin Hood** contra el colosal **Bigfoot**, en una batalla asimétrica 1 contra 1 repleta de táctica, diversión y miniaturas.

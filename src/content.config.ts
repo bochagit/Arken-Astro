@@ -8,8 +8,8 @@ const games = defineCollection({
 		title: z.string(),
 		banner: z.string(),
 		box: z.string(),
-		players: z.number(),
-		duration: z.number(),
+		players: z.string(),
+		duration: z.string(),
 		age: z.string(),
 		gallery: z.array(z.string()).optional(),
 		relatedGames: z.array(z.string()).optional()
