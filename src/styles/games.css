@@ -2,14 +2,13 @@
 
 .juegos {
     width: 100%;
-    height: auto;
+    min-height: 80vh;
 }
 
 .juegos__wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
 }
 
@@ -35,19 +34,18 @@
     }
 
     .juegos__wrapper {
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
+        grid-template: 1fr 1fr / 30vw 30vw;
+        margin-top: 3rem;
     }
 
     .juegos__image {
-        width: 35vw;
+        width: clamp(200px, 27vw, 500px);
         position: relative;
-        transition: width .2s, filter .2s;
+        transition: transform .2s, filter .2s;
     }
 
     .juegos__image:hover {
-        width: 40vw;
+        transform: scale(1.05);
         filter: drop-shadow(0 0 50px var(--space-cadet));
     }
 
