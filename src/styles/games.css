@@ -34,12 +34,12 @@
     }
 
     .juegos__wrapper {
-        grid-template: 1fr 1fr / 30vw 30vw;
+        grid-template: 1fr 1fr / 30vw 30vw 30vw;
         margin-top: 3rem;
     }
 
     .juegos__image {
-        width: clamp(200px, 27vw, 500px);
+        width: clamp(200px, 25vw, 500px);
         position: relative;
         transition: transform .2s, filter .2s;
     }
