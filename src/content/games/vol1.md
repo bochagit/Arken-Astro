@@ -1,6 +1,6 @@
 ---
 title: "Unmatched: Battle of legends: Volume I"
-banner: "/Fotos/Juego_banner_Vol1.webp"
+banner: "/Fotos/Juego_banner_Vol1.jpg"
 box: "/Fotos/Vol1_caja.webp"
 players: "2-4"
 duration: "20-40"
@@ -12,6 +12,7 @@ gallery:
 relatedGames:
   - "rh-vs-bf"
   - "sunrise"
+buyUrl: "https://arkengames.mitiendanube.com/productos/unmatchedvol1/"
 ---
 
 **Arken Games** presenta la primera caja de *Unmatched*, un juego de miniaturas y cartas asimétrico para 2 a 4 jugadores, donde héroes legendarios de distintos universos se enfrentan en combates únicos y dinámicos.
@@ -71,26 +72,23 @@ Ideal para coleccionistas y jugadores que buscan variedad y rejugabilidad sin l�
 
 ## - Contenido completo -
 
-<div class="box-content__container">
-    <ul class="main__list-description">
-        <li class="main__description-item box-content">
-            <p>4 miniaturas detalladas (héroe más ayudantes)</p>
-        </li>
-        <li class="main__description-item box-content">
-            <p>4 mazos únicos de 30 cartas cada uno</p>
-        </li>
-        <li class="main__description-item box-content">
-            <p>4 cartas de identidad de héroe</p>
-        </li>
-        <li class="main__description-item box-content">
-            <p>Fichas especiales (Merlín, Jabberwock, arpías, portero)</p>
-        </li>
-        <li class="main__description-item box-content">
-            <p>7 contadores de vida</p>
-        </li>
-        <li class="main__description-item box-content">
-            <p>Reglamento y tablero doble cara con dos escenarios</p>
-        </li>
-    </ul>
-    <img src="/Fotos/Vol1_caja.webp" alt="Caja Unmatched: Robin Hood vs Bigfoot" class="box__box">
-</div>
+<ul class="main__list-description">
+    <li class="main__description-item box-content">
+        <p>4 miniaturas detalladas (héroe más ayudantes)</p>
+    </li>
+    <li class="main__description-item box-content">
+        <p>4 mazos únicos de 30 cartas cada uno</p>
+    </li>
+    <li class="main__description-item box-content">
+        <p>4 cartas de identidad de héroe</p>
+    </li>
+    <li class="main__description-item box-content">
+        <p>Fichas especiales (Merlín, Jabberwock, arpías, portero)</p>
+    </li>
+    <li class="main__description-item box-content">
+        <p>7 contadores de vida</p>
+    </li>
+    <li class="main__description-item box-content">
+        <p>Reglamento y tablero doble cara con dos escenarios</p>
+    </li>
+</ul>

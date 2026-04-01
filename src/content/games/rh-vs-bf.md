@@ -1,6 +1,6 @@
 ---
 title: "Unmatched: Robin Hood vs. BigFoot"
-banner: "/Fotos/Juego_banner_RHvsBF.webp"
+banner: "/Fotos/Juego_banner_RHvsBF.jpg"
 box: "/Fotos/RHvsBF_caja.webp"
 players: "2"
 duration: "20"
@@ -12,6 +12,7 @@ gallery:
 relatedGames:
   - "vol1"
   - "sunrise"
+buyUrl: "https://arkengames.mitiendanube.com/productos/robinhoodvsbigfoot/"
 ---
 
 **Arken Games** trae este enfrentamiento épico entre leyendas: el astuto **Robin Hood** contra el colosal **Bigfoot**, en una batalla asimétrica 1 contra 1 repleta de táctica, diversión y miniaturas.
@@ -54,20 +55,17 @@ Porque incluye **dos mapas exclusivos** (Sherwood Forest y Yukon), que no solo a
 
 ## - CONTENIDO DE LA CAJA -
 
-<div class="box-content__container">
-    <ul class="main__list-description">
-        <li class="main__description-item box-content">
-            <p>2 miniaturas pre-pintadas (Robin Hood y Bigfoot).</p>
-        </li>
-        <li class="main__description-item box-content">
-            <p>2 mazos de 30 cartas (total 60 cartas).</p>
-        </li>
-        <li class="main__description-item box-content">
-            <p>1 tablero doble cara: <strong>Sherwood Forest y Yukon.</strong></p>
-        </li>
-        <li class="main__description-item box-content">
-            <p>5 fichas de ayudante, 3 contadores de vida y reglamento completo.</p>
-        </li>
-    </ul>
-    <img src="/Fotos/RHvsBF_caja.webp" alt="Caja Unmatched: Robin Hood vs Bigfoot" class="box__box">
-</div>
+<ul class="main__list-description">
+    <li class="main__description-item box-content">
+        <p>2 miniaturas pre-pintadas (Robin Hood y Bigfoot).</p>
+    </li>
+    <li class="main__description-item box-content">
+        <p>2 mazos de 30 cartas (total 60 cartas).</p>
+    </li>
+    <li class="main__description-item box-content">
+        <p>1 tablero doble cara: <strong>Sherwood Forest y Yukon.</strong></p>
+    </li>
+    <li class="main__description-item box-content">
+        <p>5 fichas de ayudante, 3 contadores de vida y reglamento completo.</p>
+    </li>
+</ul>

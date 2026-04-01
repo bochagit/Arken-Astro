@@ -224,7 +224,7 @@ main.slider {
 	overflow-y: hidden;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
-	width: 877px;
+	width: 870px;
 	max-width: 100%;
 	height: 675px;
 	background-color: #000;
@@ -471,6 +471,7 @@ main.slider {
 	height: 600px;
 	width: 877px;
 	margin: auto;
+	max-width: 100vw;
 }
 
 .about__text {
@@ -557,6 +558,7 @@ input::placeholder {
 	justify-content: end;
 	align-items: center;
 	padding: 0;
+	max-width: 100vw;
 }
 
 .form__form {
@@ -632,7 +634,7 @@ input[type='number'] {
 
 /* ----- CONTACT QUERIES ----- */
 
-@media screen and (min-width: 721px) {
+@media screen and (min-width: 721px){
 	.form {
 		flex-direction: row-reverse;
 		justify-content: space-evenly;
