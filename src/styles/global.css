@@ -166,7 +166,7 @@ main.slider {
 		align-items: center;
 		justify-content: center;
 		height: 1rem;
-		width: 950px;
+		width: 870px;
 		margin: auto;
 		position: static;
 		z-index: 1;
@@ -177,7 +177,7 @@ main.slider {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		gap: 0.8rem;
+		gap: 0rem;
 		margin: 0;
 		padding: 0;
 		flex: 1 1 auto;
@@ -186,7 +186,11 @@ main.slider {
 
 	.header__nav-item {
 		display: block;
-		width: 100%;
+		width: auto;
+	}
+
+	.header__nav-item a {
+		display: inline-block;
 	}
 
 	.header__logo-container {
