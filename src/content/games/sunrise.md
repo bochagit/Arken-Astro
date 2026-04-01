@@ -11,6 +11,7 @@ gallery:
 relatedGames:
   - "rh-vs-bf"
   - "vol1"
+buyUrl: "https://arkengames.mitiendanube.com/productos/sunrise-sunset/"
 ---
 
 En **Sunrise Sunset** dos dioses se enfrentan por el control del ciclo solar.
@@ -38,20 +39,17 @@ Un duelo en Sunrise Sunset es ágil, profundo y lleno de tensión, con partidas 
 
 ## - Componentes -
 
-<div class="box-content__container">
-    <ul class="main__list-description">
-        <li class="main__description-item box-content">
-            <p>3 cartas de ubicación (Deshret, Duat y Barca Solar)</p>
-        </li>
-        <li class="main__description-item box-content">
-            <p>13 Cartas de unidad</p>
-        </li>
-        <li class="main__description-item box-content">
-            <p>2 Cartas de dios personal (Horus y Seth)</p>
-        </li>
-        <li class="main__description-item box-content">
-            <p>4 Contadores de daño</p>
-        </li>
-    </ul>
-    <img src="/Fotos/Sunrise_caja.webp" alt="Caja Unmatched: Robin Hood vs Bigfoot" class="box__box">
-</div>
+<ul class="main__list-description">
+    <li class="main__description-item box-content">
+        <p>3 cartas de ubicación (Deshret, Duat y Barca Solar)</p>
+    </li>
+    <li class="main__description-item box-content">
+        <p>13 Cartas de unidad</p>
+    </li>
+    <li class="main__description-item box-content">
+        <p>2 Cartas de dios personal (Horus y Seth)</p>
+    </li>
+    <li class="main__description-item box-content">
+        <p>4 Contadores de daño</p>
+    </li>
+</ul>
