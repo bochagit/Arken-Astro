@@ -10,4 +10,13 @@ export default defineConfig({
 			prefixDefaultLocale: true,
 		},
 	},
+  server: {
+		host: true,
+		port: 4321
+	},
+	vite: {
+		server: {
+			allowedHosts: ['.tunnelmole.net']
+		}
+	}
 })
