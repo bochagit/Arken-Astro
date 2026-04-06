@@ -1,3 +1,12 @@
+---
+import { getLangFromUrl, useTranslations, getRelativeLocaleUrl, type Language } from '../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url) as Language
+const t = useTranslations(lang)
+const otherLang: Language = lang === 'es' ? 'en' : 'es'
+const pathWithoutLocale = Astro.url.pathname.replace(/^\/(es|en)/, '')
+---
+
 <header class="header">
 	<input type="checkbox" id="menu-toggle" class="header__checkbox" />
 	<label for="menu-toggle" class="header__menu-toggle" role="button">
@@ -14,19 +23,28 @@
 				/>
 			</div>
 			<li class="header__nav-item">
-				<a href="/">Inicio</a>
+				<a href={getRelativeLocaleUrl(lang, '/')}>{t('nav.inicio')}</a>
 			</li>
 			<li class="header__nav-item">
-				<a href="/juegos">Juegos</a>
+				<a href={getRelativeLocaleUrl(lang, '/juegos')}>{t('nav.juegos')}</a>
 			</li>
 			<li class="header__nav-item">
-				<a href="https://arkengames.mitiendanube.com/" rel="noopener noreferrer" target="_blank">Tienda</a>
+				<a href="https://arkengames.mitiendanube.com/" rel="noopener noreferrer" target="_blank">{t('nav.tienda')}</a>
 			</li>
 			<li class="header__nav-item">
-				<a href="/#quienes-somos">Quienes somos</a>
+				<a href={getRelativeLocaleUrl(lang, '/#quienes-somos')}>{t('nav.quienes')}</a>
 			</li>
 			<li class="header__nav-item">
-				<a href="/#contact">Contacto</a>
+				<a href={getRelativeLocaleUrl(lang, '/#contact')}>{t('nav.contacto')}</a>
+			</li>
+			<li class="header__nav-item lang-switcher">
+				<a href={`/${otherLang}${pathWithoutLocale}`} class={`lang-link ${lang === 'es' ? 'active' : ''}`}>
+					ES
+				</a>
+				<span class="lang-divider">/</span>
+				<a href={`/${otherLang}${pathWithoutLocale}`} class={`lang-link ${lang === 'en' ? 'active' : ''}`}>
+					EN
+				</a>
 			</li>
 		</ul>
 	</nav>

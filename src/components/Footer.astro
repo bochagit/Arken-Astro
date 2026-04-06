@@ -1,9 +1,16 @@
+---
+import { getLangFromUrl, useTranslations, type Language } from '../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url) as Language
+const t = useTranslations(lang)
+---
+
 <footer class="footer">
 	<div class="footer__logo-container">
 		<img src="/Fotos/Logo.webp" alt="Arken Games Logo" class="footer__logo" />
 	</div>
 	<div class="footer__social-media">
-		<p>Enterate de todas nuestras novedades!</p>
+		<p>{t('footer.news')}</p>
 		<div class="footer__social-media-icons">
 			<a href="https://www.instagram.com/arkengamesok/" target="_blank" rel="noopener noreferrer">
 				<img src="/Fotos/Instagram-icon.webp" alt="Instagram Icon" class="footer__social-icon" />
@@ -21,6 +28,6 @@
 		</div>
 	</div>
 	<div class="footer__text">
-		<p>&copy; 2025 Arken Games. Todos los derechos reservados.</p>
+		<p>{t('footer.copyright')}</p>
 	</div>
 </footer>

@@ -1,17 +1,21 @@
 ---
-const { title } = Astro.props
+import { getLangFromUrl, type Language } from '../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url) as Language
+const langDir = lang === 'es' ? 'es' : 'en'
+
 import '../styles/global.css'
 import '../styles/games.css'
 import '../styles/fonts.css'
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={langDir}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>{title}</title>
+		<title>{Astro.props.title}</title>
 
 		<link rel="icon" href="/Fotos/Logo.webp" type="image/webp" />
 
@@ -20,6 +24,9 @@ import '../styles/fonts.css'
 			content="Pagina web de Arken Games, editorial de juegos de mesa en Argentina."
 		/>
 		<meta name="author" content="Gonzalo Cardozo - github.com/bochagit" />
+
+		<link rel="alternate" hreflang="es" href="https://arkengames.com/es" />
+		<link rel="alternate" hreflang="en" href="https://arkengames.com/en" />
 
 		<!-- Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CKXG8YDXR0"></script>
@@ -38,6 +45,7 @@ import '../styles/fonts.css'
 	</head>
 	<body>
 		<slot />
+		<script is:inline src="/Scripts/detect-language.js"></script>
 		<script type="module" src="/Scripts/modal.js"></script>
 		<script is:inline src="/Scripts/header-scroll.js"></script>
 	</body>

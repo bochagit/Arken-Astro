@@ -4,18 +4,34 @@ emailjs.init({
 	publicKey: 'A0-xBpxenC6fp2mYf'
 })
 
+const messages = {
+	es: {
+		sending: 'Enviando...',
+		success: '¡Mensaje enviado!',
+		error: 'Error al enviar el mensaje.'
+	},
+	en: {
+		sending: 'Sending...',
+		success: 'Message sent!',
+		error: 'Error sending message.'
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	const form = document.getElementById('contact-form')
 
 	if (!form) return
 
+	const lang = form.dataset.lang || 'es'
+	const msgs = messages[lang] || messages.es
 	const submitBtn = form.querySelector('input[type="submit"]')
+	const originalValue = submitBtn.value
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault()
 
 		submitBtn.disabled = true
-		submitBtn.value = 'Enviando...'
+		submitBtn.value = msgs.sending
 
 		const parms = {
 			name: document.getElementById('name').value,
@@ -28,15 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		emailjs
 			.send('service_ddht0l6', 'template_8mbch1a', parms)
 			.then(() => {
-				alert('¡Mensaje enviado!')
+				alert(msgs.success)
 				form.reset()
 			})
 			.catch(() => {
-				alert('Error al enviar el mensaje.')
+				alert(msgs.error)
 			})
 			.finally(() => {
 				submitBtn.disabled = false
-				submitBtn.value = 'Enviar'
+				submitBtn.value = originalValue
 			})
 	})
 })
+
