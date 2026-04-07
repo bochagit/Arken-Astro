@@ -40,7 +40,8 @@ export const ui = {
 		'games.coming': 'Proximamente',
 		'games.players': 'Jugadores',
 		'games.duration': 'Minutos',
-		'games.age': 'Años'
+		'games.age': 'Años',
+		'main.moreInfo': 'Mas información'
 	},
 	en: {
 		'nav.inicio': 'Home',
@@ -76,6 +77,7 @@ export const ui = {
 		'games.coming': 'Coming soon',
 		'games.players': 'Players',
 		'games.duration': 'Minutes',
-		'games.age': 'Years'
+		'games.age': 'Years',
+		'main.moreInfo': 'More information'
 	}
 } as const

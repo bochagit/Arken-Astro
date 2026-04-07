@@ -1,35 +1,46 @@
+---
+import { getLangFromUrl, useTranslations, getRelativeLocaleUrl, type Language } from '../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url) as Language
+const t = useTranslations(lang)
+
+const vol1Url = getRelativeLocaleUrl(lang, '/juegos/vol1')
+const rhVsBfUrl = getRelativeLocaleUrl(lang, '/juegos/rh-vs-bf')
+const sunriseUrl = getRelativeLocaleUrl(lang, '/juegos/sunrise')
+---
+
 <main class="slider" id="inicio">
 	<div class="slider__progress-bar">
 		<div class="slider__progress"></div>
 	</div>
 	<div class="slider__wrapper" id="sliderWrapper">
 		<div class="slider__item">
-			<a href="/juegos/vol1">
+			<a href={vol1Url}>
 				<img
 					src="/Fotos/Banner_volume-one.webp"
 					alt="Banner of Unmatched: Battle of legends Volume one game"
 				/>
 				<div class="slider__button">
-					<a href="/juegos/vol1" class="slider__button-link">Más información</a>
+					<a href={vol1Url} class="slider__button-link">{t('main.moreInfo')}</a>
 				</div>
 			</a>
 		</div>
 		<div class="slider__item">
-			<a href="/juegos/rh-vs-bf">
+			<a href={rhVsBfUrl}>
 				<img
 					src="/Fotos/Banner_RHvsBF.webp"
 					alt="Banner of Unmatched: Robin Hood vs Bigfoot game"
 				/>
 				<div class="slider__button">
-					<a href="/juegos/rh-vs-bf" class="slider__button-link">Más información</a>
+					<a href={rhVsBfUrl} class="slider__button-link">{t('main.moreInfo')}</a>
 				</div>
 			</a>
 		</div>
 		<div class="slider__item">
-			<a href="/juegos/sunrise">
+			<a href={sunriseUrl}>
 				<img src="/Fotos/Banner_Sunrise.webp" alt="Banner of Sunrise Sunset" />
 				<div class="slider__button">
-					<a href="/juegos/sunrise" class="slider__button-link">Más información</a>
+					<a href={sunriseUrl} class="slider__button-link">{t('main.moreInfo')}</a>
 				</div>
 			</a>
 		</div>
