@@ -37,15 +37,15 @@ const pathWithoutLocale = Astro.url.pathname.replace(/^\/(es|en)/, '')
 			<li class="header__nav-item">
 				<a href={getRelativeLocaleUrl(lang, '/#contact')}>{t('nav.contacto')}</a>
 			</li>
-			<li class="header__nav-item lang-switcher">
-				<a href={`/${otherLang}${pathWithoutLocale}`} class={`lang-link ${lang === 'es' ? 'active' : ''}`}>
-					ES
-				</a>
-				<span class="lang-divider">/</span>
-				<a href={`/${otherLang}${pathWithoutLocale}`} class={`lang-link ${lang === 'en' ? 'active' : ''}`}>
-					EN
-				</a>
-			</li>
 		</ul>
+		<div class="lang-switcher">
+			<a href={`/${otherLang}${pathWithoutLocale}`} class={`lang-link ${lang === 'es' ? 'active' : ''}`}>
+				ES
+			</a>
+			<span class="lang-divider">/</span>
+			<a href={`/${otherLang}${pathWithoutLocale}`} class={`lang-link ${lang === 'en' ? 'active' : ''}`}>
+				EN
+			</a>
+		</div>
 	</nav>
 </header>
