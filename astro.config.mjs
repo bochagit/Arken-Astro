@@ -7,10 +7,10 @@ export default defineConfig({
 		defaultLocale: 'es',
 		locales: ['es', 'en'],
 		routing: {
-			prefixDefaultLocale: true,
-		},
+			prefixDefaultLocale: true
+		}
 	},
-  server: {
+	server: {
 		host: true,
 		port: 4321
 	},

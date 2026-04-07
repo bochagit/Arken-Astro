@@ -9,11 +9,11 @@ import '../../../styles/games.css'
 export const getStaticPaths: GetStaticPaths = async () => {
 	const games = await getCollection('games')
 
-	const enGames = games.filter(game => game.id.endsWith('-en'))
+	const enGames = games.filter((game) => game.id.endsWith('-en'))
 
 	return enGames.map((game) => ({
 		params: { slug: game.id.replace('-en', '') },
-		props: { game, allGames: enGames },
+		props: { game, allGames: enGames }
 	}))
 }
 

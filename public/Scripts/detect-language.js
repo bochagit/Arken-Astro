@@ -1,5 +1,5 @@
 // Detect browser language and redirect to appropriate locale
-(function () {
+;(function () {
 	const pathname = window.location.pathname
 	const isRootPath = pathname === '/' || pathname === ''
 
