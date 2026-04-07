@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const navLinks = document.querySelectorAll('.header__nav-item a')
+	const navLinks = document.querySelectorAll('.header__nav-item a:not(.lang-link)')
 	const menuToggle = document.getElementById('menu-toggle')
 
 	const MOBILE_BREAKPOINT = 720
 	const MOBILE_HEADER_OFFSET = 51
 	const DESKTOP_HEADER_OFFSET = 0
 
-	const isHome = location.pathname === '/' || location.pathname.endsWith('/index.html')
+	const pathnameParts = window.location.pathname.split('/').filter(Boolean)
+	const lang = ['es', 'en'].includes(pathnameParts[0]) ? pathnameParts[0] : 'es'
+	const isHome = `/${lang}/` === window.location.pathname || `/` === window.location.pathname
 
 	function getOffset() {
 		return window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches
@@ -22,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function cleanHash() {
-		history.replaceState({}, '', `${location.pathname}${location.search}`)
+		history.replaceState({}, '', `${window.location.pathname}${window.location.search}`)
 	}
 
 	function scrollToId(id) {
@@ -39,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			if (!isHome) return
 
-			if (href === '/') {
+			if (href === `/${lang}/` || href === '/') {
 				event.preventDefault()
 				closeMenuIfOpen()
 				window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -56,11 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
-	if (isHome && location.hash) {
-		const id = location.hash.slice(1)
+	if (isHome && window.location.hash) {
+		const id = window.location.hash.slice(1)
 		requestAnimationFrame(() => {
 			scrollToId(id)
 			cleanHash()
 		})
 	}
 })
+

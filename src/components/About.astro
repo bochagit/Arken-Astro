@@ -1,16 +1,21 @@
+---
+import { getLangFromUrl, useTranslations, type Language } from '../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url) as Language
+const t = useTranslations(lang)
+---
+
 <section class="about" id="quienes-somos">
 	<div class="about__logo-container">
 		<img src="/Fotos/Logo.webp" alt="Arken Games Logo" class="about__logo" />
 	</div>
 	<div class="about__text">
-		<h2 class="about__title">Quienes somos</h2>
+		<h2 class="about__title">{t('about.title')}</h2>
 		<p>
-			Arken Games es una editorial Argentina de juegos de mesa que cree que jugar es mucho más que
-			entretenerse: es conectar, crear y compartir momentos reales.
+			{t('about.text1')}
 		</p>
 		<p>
-			Publicamos juegos pensados para disfrutar en familia o entre amigos, cuidando cada detalle
-			para brindar experiencias memorables.
+			{t('about.text2')}
 		</p>
 	</div>
 </section>

@@ -658,9 +658,9 @@
         grid-template-columns: minmax(74px, 92px) minmax(0, 1fr);
         align-items: stretch;
         gap: 0.55rem;
-        width: 100%;
+        width: 70%;
         max-width: 100%;
-        margin: 0.2rem 0 0.85rem;
+        margin: auto;
         padding: 0.56rem;
         border-radius: 1rem;
     }
@@ -688,6 +688,7 @@
     .main__game-buy--mobile .main__game-buy-title {
         font-size: 0.66rem;
         letter-spacing: 0.05em;
+        text-align: center;
     }
 
     .main__game-buy--mobile .buy__button {

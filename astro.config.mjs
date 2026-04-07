@@ -3,7 +3,14 @@ import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
 export default defineConfig({
-	server: {
+	i18n: {
+		defaultLocale: 'es',
+		locales: ['es', 'en'],
+		routing: {
+			prefixDefaultLocale: true,
+		},
+	},
+  server: {
 		host: true,
 		port: 4321
 	},
