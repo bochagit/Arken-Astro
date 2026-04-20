@@ -26,6 +26,29 @@ const { Content } = await render(game)
 const relatedGamesList = game.data.relatedGames
 	? allGames.filter((g) => game.data.relatedGames?.includes(g.id))
 	: []
+
+function getYouTubeEmbedUrl(url?: string): string | null {
+	if (!url) return null
+
+	const match = url.match(
+		/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([A-Za-z0-9_-]{11})/
+	)
+
+	if (!match) return null
+
+	return `https://www.youtube.com/embed/${match[1]}`
+}
+
+const youtubeLinks = [
+	...(game.data.youtubeUrls ?? []),
+	...(game.data.youtubeUrl ? [game.data.youtubeUrl] : [])
+]
+const youtubeEmbedUrls = youtubeLinks
+	.map((url) => getYouTubeEmbedUrl(url))
+	.filter((url): url is string => Boolean(url))
+
+const hasGalleryContent = (game.data.gallery?.length ?? 0) > 0
+const hasVideoContent = youtubeEmbedUrls.length > 0
 ---
 
 <MainLayout title={game.data.title}>
@@ -150,7 +173,7 @@ const relatedGamesList = game.data.relatedGames
 		</div>
 
 		{
-			game.data.gallery && game.data.gallery.length > 0 && (
+			hasGalleryContent && (
 				<>
 					<div class="gallery__title-container">
 						<div class="gallery__title-line" />
@@ -159,12 +182,39 @@ const relatedGamesList = game.data.relatedGames
 					</div>
 
 					<section class="gallery">
-						{game.data.gallery.map((photo) => (
-							<img src={photo} alt={`Foto de ${game.data.title}`} />
+						{(game.data.gallery ?? []).map((photo) => (
+							<img src={photo} alt={`Foto de ${game.data.title}`} data-gallery-image="true" />
 						))}
 					</section>
 
 					<span class="photo__copyright">Photos by Board Game Shot</span>
+				</>
+			)
+		}
+
+		{
+			hasVideoContent && (
+				<>
+					<div class="gallery__title-container">
+						<div class="gallery__title-line" />
+						<h2 class="gallery__title">Videos</h2>
+						<div class="gallery__title-line" />
+					</div>
+
+					<section class="gallery gallery--videos">
+						{youtubeEmbedUrls.map((url, index) => (
+							<div class="gallery__video-item">
+								<iframe
+									src={url}
+									title={`Video ${index + 1} de ${game.data.title}`}
+									loading="lazy"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									referrerpolicy="strict-origin-when-cross-origin"
+									allowfullscreen
+								></iframe>
+							</div>
+						))}
+					</section>
 				</>
 			)
 		}
@@ -199,7 +249,19 @@ const relatedGamesList = game.data.relatedGames
 		<Footer />
 	</div>
 	<div id="imageModal" class="image-modal" aria-hidden="true">
+		<button
+			type="button"
+			id="modalPrev"
+			class="image-modal__nav image-modal__nav--prev"
+			aria-label="Foto anterior">&#8249;</button
+		>
 		<span class="image-modal__close" aria-label="Cerrar modal">&times;</span>
 		<img id="modalImg" class="image-modal__content" alt="" />
+		<button
+			type="button"
+			id="modalNext"
+			class="image-modal__nav image-modal__nav--next"
+			aria-label="Foto siguiente">&#8250;</button
+		>
 	</div>
 </MainLayout>

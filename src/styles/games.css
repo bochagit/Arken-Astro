@@ -266,24 +266,27 @@
 }
 
 .gallery {
-    display: flex;
-    width: 95vw;
-    height: 40vh;
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    width: min(980px, 92vw);
+    margin: 0 auto;
 }
 
 .gallery img {
-    width: 0;
-    flex-grow: 1;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    opacity: .6;
-    transition: .5s ease;
+    border-radius: 0.85rem;
+    opacity: 0.94;
+    cursor: zoom-in;
+    transition: transform .2s, filter .2s, opacity .2s;
 }
 
 .gallery img:hover {
-    width: 70%;
+    transform: translateY(-4px);
     opacity: 1;
-    filter: contrast(1.2);
+    filter: contrast(1.06);
 }
 
 .photo__copyright {
@@ -293,12 +296,27 @@
     margin-left: 5vw;
 }
 
+.gallery__video-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.85rem;
+    overflow: hidden;
+    box-shadow: 0 10px 24px #00000080;
+    background: #000;
+}
+
+.gallery__video-item iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
 /* ----- GALLERY QUERIES ----- */
 
 @media screen and (min-width: 721px) {
     .gallery {
         width: 60vw;
-        height: 70vh;
     }
 
     .photo__copyright {
@@ -491,6 +509,63 @@
     max-height: 90vh;
     border-radius: 10px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.image-modal__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 999px;
+    background: rgba(20, 18, 34, 0.75);
+    color: var(--ghost-white);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+}
+
+.image-modal__nav:hover {
+    background: rgba(20, 18, 34, 0.95);
+}
+
+.image-modal__nav--prev {
+    left: 1rem;
+}
+
+.image-modal__nav--next {
+    right: 1rem;
+}
+
+.image-modal__nav.is-visible {
+    display: flex;
+}
+
+@media screen and (max-width: 720px) {
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: min(92vw, 640px);
+    }
+
+    .image-modal__nav {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.75rem;
+    }
+
+    .image-modal__nav--prev {
+        left: 0.5rem;
+    }
+
+    .image-modal__nav--next {
+        right: 0.5rem;
+    }
 }
 
 .image-modal__close {

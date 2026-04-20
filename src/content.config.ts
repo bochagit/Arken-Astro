@@ -12,6 +12,8 @@ const games = defineCollection({
 		duration: z.string(),
 		age: z.string(),
 		gallery: z.array(z.string()).optional(),
+			youtubeUrl: z.string().url().optional(),
+			youtubeUrls: z.array(z.string().url()).optional(),
 		relatedGames: z.array(z.string()).optional(),
 		buyUrl: z.string().optional()
 	})

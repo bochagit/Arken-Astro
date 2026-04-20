@@ -9,6 +9,8 @@ gallery:
   - "/Fotos/Vol1_1.webp"
   - "/Fotos/Vol1_2.webp"
   - "/Fotos/Vol1_3.webp"
+youtubeUrls:
+  - "https://www.youtube.com/watch?v=vedzR0YdADI"
 relatedGames:
   - "rh-vs-bf"
   - "sunrise"
