@@ -3,7 +3,6 @@ import { getLangFromUrl, useTranslations, getRelativeLocaleUrl, type Language } 
 
 const lang = getLangFromUrl(Astro.url) as Language
 const t = useTranslations(lang)
-const otherLang: Language = lang === 'es' ? 'en' : 'es'
 const pathWithoutLocale = Astro.url.pathname.replace(/^\/(es|en)/, '')
 ---
 
@@ -13,43 +12,36 @@ const pathWithoutLocale = Astro.url.pathname.replace(/^\/(es|en)/, '')
 		<img src="/Fotos/Nav-icon.webp" alt="Icono abrir menu" class="menu-toggle__icon" />
 	</label>
 	<nav class="header__nav">
-		<ul class="header__nav-list">
-			<div class="header__logo-container">
-				<img
-					src="/Fotos/Logo.webp"
-					alt="Logo Arken Games"
-					class="header__logo"
-					style="view-transition-name: arken-logo"
-				/>
-			</div>
-			<li class="header__nav-item">
-				<a href={getRelativeLocaleUrl(lang, '/')}>{t('nav.inicio')}</a>
-			</li>
-			<li class="header__nav-item">
-				<a href={getRelativeLocaleUrl(lang, '/juegos')}>{t('nav.juegos')}</a>
-			</li>
-			<li class="header__nav-item">
-				<a href="https://arkengames.mitiendanube.com/" rel="noopener noreferrer" target="_blank"
-					>{t('nav.tienda')}</a
-				>
-			</li>
-			<li class="header__nav-item">
-				<a href={getRelativeLocaleUrl(lang, '/#quienes-somos')}>{t('nav.quienes')}</a>
-			</li>
-			<li class="header__nav-item">
-				<a href={getRelativeLocaleUrl(lang, '/#contact')}>{t('nav.contacto')}</a>
-			</li>
-		</ul>
+		<div class="header__nav-group header__nav-group--left">
+			<a href="https://arkengames.mitiendanube.com/" rel="noopener noreferrer" target="_blank" class="header__nav-link">{t('nav.tienda')}</a>
+			<a href={getRelativeLocaleUrl(lang, '/')} class="header__nav-link">{t('nav.inicio')}</a>
+			<a href={getRelativeLocaleUrl(lang, '/juegos')} class="header__nav-link">{t('nav.juegos')}</a>
+		</div>
+
+		<div class="header__logo-container">
+			<img
+				src="/Fotos/Logo.webp"
+				alt="Logo Arken Games"
+				class="header__logo"
+				style="view-transition-name: arken-logo"
+			/>
+		</div>
+
+		<div class="header__nav-group header__nav-group--right">
+			<a href={getRelativeLocaleUrl(lang, '/#quienes-somos')} class="header__nav-link">{t('nav.quienes')}</a>
+			<a href={getRelativeLocaleUrl(lang, '/#contact')} class="header__nav-link">{t('nav.contacto')}</a>
+			<a href={getRelativeLocaleUrl(lang, '/torneos')} class="header__nav-link">{t('nav.torneos')}</a>
+		</div>
 		<div class="lang-switcher">
 			<a
-				href={`/${otherLang}${pathWithoutLocale}`}
+				href={`/es${pathWithoutLocale}`}
 				class={`lang-link ${lang === 'es' ? 'active' : ''}`}
 			>
 				ES
 			</a>
 			<span class="lang-divider">/</span>
 			<a
-				href={`/${otherLang}${pathWithoutLocale}`}
+				href={`/en${pathWithoutLocale}`}
 				class={`lang-link ${lang === 'en' ? 'active' : ''}`}
 			>
 				EN

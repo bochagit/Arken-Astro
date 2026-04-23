@@ -12,6 +12,7 @@ export const ui = {
 		'nav.tienda': 'Tienda',
 		'nav.quienes': 'Quienes somos',
 		'nav.contacto': 'Contacto',
+		'nav.torneos': 'Torneos',
 		'about.title': 'Quienes somos',
 		'about.text1':
 			'Arken Games es una editorial Argentina de juegos de mesa que cree que jugar es mucho más que entretenerse: es conectar, crear y compartir momentos reales.',
@@ -49,6 +50,7 @@ export const ui = {
 		'nav.tienda': 'Shop',
 		'nav.quienes': 'About Us',
 		'nav.contacto': 'Contact',
+		'nav.torneos': 'Tournaments',
 		'about.title': 'About Us',
 		'about.text1':
 			'Arken Games is an Argentine board game publisher that believes playing is much more than entertainment: it is connecting, creating and sharing real moments.',

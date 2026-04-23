@@ -1,0 +1,88 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+import '../../styles/torneos.css'
+---
+
+<MainLayout title="Torneos | Arken">
+	<div class="wallpaper__overlay">
+		<Header />
+
+		<main class="torneos">
+			<section class="torneos__intro">
+				<img src="/Fotos/Torneos_banner.png" alt="Banner torneos" class="torneos__banner" />
+				<h2 class="torneos__title">Formatos de torneos</h2>
+				<div class="torneos__accordion">
+					<details class="torneos__item torneos__item--red" open>
+						<summary>Conscript</summary>
+						<div class="torneos__content">
+							<div class="torneos__content-grid">
+								<img src="/Fotos/CONSCRIPT.png" alt="Formato Conscript" class="torneos__content-image" />
+								<div class="torneos__content-copy">
+									<h3>
+										Formato de eliminación donde construís tu equipo a medida que avanzás.
+									</h3>
+									<ul>
+										<li>Torneo 1 vs 1 de eliminación directa. Cada ronda es una partida única.</li>
+										<li>Cada jugador comienza con 2 personajes asignados.</li>
+										<li>Al ganar una ronda, descartás el personaje ganador.</li>
+										<li>Incorporás todos los personajes de tu rival a tu roster.</li>
+										<li>Elegís 3 personajes para la siguiente ronda.</li>
+										<li>Ideal para jugadores que buscan partidas dinámicas y adaptación constante.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</details>
+
+					<details class="torneos__item torneos__item--blue">
+						<summary>Roster</summary>
+						<div class="torneos__content">
+							<div class="torneos__content-grid torneos__content-grid--reverse">
+								<img src="/Fotos/ROSTER.png" alt="Formato Rooster" class="torneos__content-image" />
+								<div class="torneos__content-copy">
+									<h3>
+										Formato competitivo avanzado con múltiples partidas por ronda
+									</h3>
+									<ul>
+										<li>Torneo competitivo 1 vs 1 en formato suizo, con dos partidas por ronda.</li>
+										<li>Cada jugador registra un roster de 4 personajes</li>
+										<li>En cada ronda se proponen 2 enfrentamientos posibles</li>
+										<li>El primero se define al azar (vale 1 punto)</li>
+										<li>El ganador elige el segundo enfrentamiento (vale 2 puntos)</li>
+									</ul>
+									<p>Pensado para jugadores con experiencia que buscan profundidad estratégica</p>
+								</div>
+							</div>
+						</div>
+					</details>
+
+					<details class="torneos__item torneos__item--purple">
+						<summary>2 vs 2</summary>
+						<div class="torneos__content">
+							<div class="torneos__content-grid">
+								<img src="/Fotos/2VS2.png" alt="Formato 2 vs 2" class="torneos__content-image" />
+								<div class="torneos__content-copy">
+									<h3>
+										Formato en equipo donde la coordinación se une a la estrategia
+									</h3>
+									<p>Torneo en equipos de 2 jugadores, en formato suizo. Se juega una partida por ronda.</p>
+									<ul>
+										<li>Cada equipo arma un roster de 6 personajes compartidos</li>
+										<li>Antes de cada ronda, se banea 1 personaje del rival</li>
+										<li>Cada equipo elige 2 personajes para jugar</li>
+										<li>Se gana eliminando ambos héroes rivales</li>
+									</ul>
+									<p>Ideal para jugar en equipo y coordinar estrategias</p>
+								</div>
+							</div>
+						</div>
+					</details>
+				</div>
+			</section>
+		</main>
+
+		<Footer />
+	</div>
+</MainLayout>

@@ -1,0 +1,200 @@
+.torneos {
+	width: min(960px, 92vw);
+	margin: 0 auto 4rem;
+	color: var(--ghost-white);
+}
+
+.torneos__intro {
+	text-align: center;
+	margin: 1.5rem auto 2rem;
+}
+
+.torneos__banner {
+	display: block;
+	width: min(100%, 750px);
+	height: auto;
+	margin: 0 auto 1rem;
+	object-fit: contain;
+}
+
+.torneos__title {
+	margin: 2.5rem 0;
+	font-family: 'Spectral SC';
+	font-size: clamp(1rem, 1.5vw, 2rem);
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	text-align: left;
+	color: var(--hunyadi-yellow);
+}
+
+.torneos__subtitle {
+	margin: 0.8rem auto 0;
+	max-width: 760px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.torneos__heading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.9rem;
+	margin-bottom: 1rem;
+}
+
+.torneos__heading h2 {
+	margin: 0;
+	font-family: 'Spectral SC';
+	font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.torneos__heading-line {
+	width: min(160px, 18vw);
+	height: 2px;
+	background: var(--hunyadi-yellow);
+	opacity: 0.85;
+}
+
+.torneos__accordion {
+	display: grid;
+	gap: 0.9rem;
+}
+
+.torneos__item {
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	overflow: visible;
+}
+
+.torneos__item summary {
+	list-style: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0.95rem 1.15rem;
+	border-bottom: 1px solid #ffffff66;
+	background: transparent;
+	font-family: 'Spectral SC';
+	font-size: clamp(0.95rem, 1.1vw, 1.08rem);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.torneos__item summary::-webkit-details-marker {
+	display: none;
+}
+
+.torneos__item summary::after {
+	content: '+';
+	font-family: 'Lora';
+	font-size: 1.4rem;
+	line-height: 1;
+	opacity: 0.9;
+}
+
+.torneos__item[open] summary::after {
+	content: '-';
+}
+
+.torneos__content {
+	padding: 0 1.15rem 1rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.torneos__content-grid {
+	display: grid;
+	grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+	gap: 1.1rem;
+	align-items: center;
+	padding-top: 0.9rem;
+}
+
+.torneos__content-grid--reverse {
+	grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
+}
+
+.torneos__content-grid--reverse .torneos__content-image {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.torneos__content-grid--reverse .torneos__content-copy {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.torneos__content-image {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	border-radius: 0;
+	align-self: start;
+}
+
+.torneos__content-copy {
+	min-width: 0;
+}
+
+.torneos__content p {
+	margin: 0.25rem 0;
+}
+
+.torneos__content ul {
+	margin: 0.55rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.torneos__content li {
+	margin: 0.28rem 0;
+}
+
+@media screen and (max-width: 720px) {
+	.torneos {
+		width: min(94vw, 680px);
+	}
+
+	.torneos__banner {
+		width: min(100%, 420px);
+	}
+
+	.torneos__heading-line {
+		width: min(80px, 16vw);
+	}
+
+	.torneos__item summary {
+		padding: 0.85rem 1rem;
+	}
+
+	.torneos__content {
+		padding: 0 1rem 0.95rem;
+	}
+
+	.torneos__content-grid {
+		grid-template-columns: 1fr;
+		gap: 0.8rem;
+	}
+
+	.torneos__content-grid--reverse {
+		grid-template-columns: 1fr;
+	}
+
+	.torneos__content-grid--reverse .torneos__content-image,
+	.torneos__content-grid--reverse .torneos__content-copy {
+		grid-column: auto;
+		grid-row: auto;
+	}
+
+	.torneos__content-image {
+		max-width: 320px;
+		margin: 0 auto;
+	}
+}

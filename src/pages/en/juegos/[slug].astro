@@ -230,7 +230,10 @@ const hasVideoContent = youtubeEmbedUrls.length > 0
 					<div class="similar__game-container">
 						{relatedGamesList.map((relatedGame) => (
 							<div class="similar__game">
-								<a href={`/en/juegos/${relatedGame.id}`} class="similar__game-link">
+								<a
+									href={`/en/juegos/${relatedGame.id.replace(/-en$/, '')}`}
+									class="similar__game-link"
+								>
 									<img
 										src={relatedGame.data.box}
 										alt={relatedGame.data.title}

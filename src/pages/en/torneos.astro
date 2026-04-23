@@ -1,0 +1,94 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro'
+import Header from '../../components/Header.astro'
+import Footer from '../../components/Footer.astro'
+import '../../styles/torneos.css'
+---
+
+<MainLayout title="Tournaments | Arken">
+	<div class="wallpaper__overlay">
+		<Header />
+
+		<main class="torneos">
+			<section class="torneos__intro">
+				<h1 class="torneos__title">Official Tournaments</h1>
+				<p class="torneos__subtitle">
+					Choose the format that best fits your event. Three competitive modes focused on
+					strategy, variety, and dynamic matches.
+				</p>
+			</section>
+
+			<section>
+				<div class="torneos__heading">
+					<span class="torneos__heading-line" aria-hidden="true"></span>
+					<h2>Formats</h2>
+					<span class="torneos__heading-line" aria-hidden="true"></span>
+				</div>
+
+				<div class="torneos__accordion">
+					<details class="torneos__item torneos__item--red" open>
+						<summary>Conscript</summary>
+						<div class="torneos__content">
+							<div class="torneos__content-grid">
+								<img src="/Fotos/CONSCRIPT.png" alt="Conscript format" class="torneos__content-image" />
+								<div class="torneos__content-copy">
+									<p>
+										Single-elimination 1v1 format. You advance each round while your roster changes
+										as characters are retired.
+									</p>
+									<ul>
+										<li>One match per round.</li>
+										<li>Constant character rotation.</li>
+										<li>Ideal for fast adaptation.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</details>
+
+					<details class="torneos__item torneos__item--blue">
+						<summary>Rooster</summary>
+						<div class="torneos__content">
+							<div class="torneos__content-grid torneos__content-grid--reverse">
+								<img src="/Fotos/ROOSTER.png" alt="Rooster format" class="torneos__content-image" />
+								<div class="torneos__content-copy">
+									<p>
+										Swiss 1v1 format with two matches per round.
+									</p>
+									<ul>
+										<li>Each player registers a 4-character roster.</li>
+										<li>You choose tactical matchups.</li>
+										<li>Two matches per round.</li>
+										<li>Ideal for deeper competitive play.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</details>
+
+					<details class="torneos__item torneos__item--purple">
+						<summary>2 vs 2</summary>
+						<div class="torneos__content">
+							<div class="torneos__content-grid">
+								<img src="/Fotos/2V2.png" alt="2 vs 2 format" class="torneos__content-image" />
+								<div class="torneos__content-copy">
+									<p>
+										Team format with two players per side.
+									</p>
+									<ul>
+										<li>Build a shared roster.</li>
+										<li>Coordinate picks each round to maximize synergy.</li>
+										<li>Co-op strategy and shared planning.</li>
+										<li>Ideal for team play.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</details>
+				</div>
+			</section>
+		</main>
+
+		<Footer />
+	</div>
+</MainLayout>
