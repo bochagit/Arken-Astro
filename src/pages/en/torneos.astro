@@ -11,20 +11,8 @@ import '../../styles/torneos.css'
 
 		<main class="torneos">
 			<section class="torneos__intro">
-				<h1 class="torneos__title">Official Tournaments</h1>
-				<p class="torneos__subtitle">
-					Choose the format that best fits your event. Three competitive modes focused on
-					strategy, variety, and dynamic matches.
-				</p>
-			</section>
-
-			<section>
-				<div class="torneos__heading">
-					<span class="torneos__heading-line" aria-hidden="true"></span>
-					<h2>Formats</h2>
-					<span class="torneos__heading-line" aria-hidden="true"></span>
-				</div>
-
+				<img src="/Fotos/Torneos_banner.png" alt="Tournaments banner" class="torneos__banner" />
+				<h2 class="torneos__title">Tournament formats</h2>
 				<div class="torneos__accordion">
 					<details class="torneos__item torneos__item--red" open>
 						<summary>Conscript</summary>
@@ -32,14 +20,16 @@ import '../../styles/torneos.css'
 							<div class="torneos__content-grid">
 								<img src="/Fotos/CONSCRIPT.png" alt="Conscript format" class="torneos__content-image" />
 								<div class="torneos__content-copy">
-									<p>
-										Single-elimination 1v1 format. You advance each round while your roster changes
-										as characters are retired.
-									</p>
+									<h3>
+										Elimination format where your roster evolves as you advance.
+									</h3>
 									<ul>
-										<li>One match per round.</li>
-										<li>Constant character rotation.</li>
-										<li>Ideal for fast adaptation.</li>
+										<li>1 vs 1 single-elimination tournament. One game per round.</li>
+										<li>Each player starts with 2 assigned characters.</li>
+										<li>When you win a round, you discard the winning character.</li>
+										<li>You add all your rival characters to your roster.</li>
+										<li>You choose 3 characters for the next round.</li>
+										<li>Great for dynamic play and constant adaptation.</li>
 									</ul>
 								</div>
 							</div>
@@ -50,17 +40,19 @@ import '../../styles/torneos.css'
 						<summary>Rooster</summary>
 						<div class="torneos__content">
 							<div class="torneos__content-grid torneos__content-grid--reverse">
-								<img src="/Fotos/ROOSTER.png" alt="Rooster format" class="torneos__content-image" />
+								<img src="/Fotos/ROSTER.png" alt="Roster format" class="torneos__content-image" />
 								<div class="torneos__content-copy">
-									<p>
-										Swiss 1v1 format with two matches per round.
-									</p>
+									<h3>
+										Advanced competitive format with multiple games each round.
+									</h3>
 									<ul>
-										<li>Each player registers a 4-character roster.</li>
-										<li>You choose tactical matchups.</li>
-										<li>Two matches per round.</li>
-										<li>Ideal for deeper competitive play.</li>
+										<li>Competitive 1 vs 1 swiss format, with two games per round.</li>
+										<li>Each player registers a roster of 4 characters.</li>
+										<li>In each round, 2 possible matchups are proposed.</li>
+										<li>The first is random (worth 1 point).</li>
+										<li>The winner chooses the second matchup (worth 2 points).</li>
 									</ul>
+									<p>Designed for experienced players looking for strategic depth.</p>
 								</div>
 							</div>
 						</div>
@@ -70,25 +62,148 @@ import '../../styles/torneos.css'
 						<summary>2 vs 2</summary>
 						<div class="torneos__content">
 							<div class="torneos__content-grid">
-								<img src="/Fotos/2V2.png" alt="2 vs 2 format" class="torneos__content-image" />
+								<img src="/Fotos/2VS2.png" alt="2 vs 2 format" class="torneos__content-image" />
 								<div class="torneos__content-copy">
-									<p>
-										Team format with two players per side.
-									</p>
+									<h3>
+										Team format where coordination meets strategy.
+									</h3>
+									<p>2-player teams in swiss format. One game per round.</p>
 									<ul>
-										<li>Build a shared roster.</li>
-										<li>Coordinate picks each round to maximize synergy.</li>
-										<li>Co-op strategy and shared planning.</li>
-										<li>Ideal for team play.</li>
+										<li>Each team builds a shared roster of 6 characters.</li>
+										<li>Before each round, 1 rival character is banned.</li>
+										<li>Each team selects 2 characters to play.</li>
+										<li>You win by eliminating both rival heroes.</li>
 									</ul>
+									<p>Ideal for coordinated team play.</p>
 								</div>
 							</div>
 						</div>
 					</details>
+				</div>
+
+				<div class="torneos__organiza-section">
+					<div class="torneos__organiza-content">
+						<h2 class="torneos__organiza-title">Organize official tournaments</h2>
+						<p class="torneos__organiza-subtitle">Join as a host and be part of the Unmatched circuit in Argentina</p>
+						<ul class="torneos__organiza-benefits">
+							<li>Use official formats (Conscript, 2vs2, Rooster)</li>
+							<li>Promotion through Arken Games channels</li>
+							<li>Official prizes</li>
+							<li>Be part of community growth</li>
+						</ul>
+						<button class="torneos__organiza-button">Apply as host</button>
+					</div>
+					<div class="torneos__carousel-container" data-carousel-images="/Fotos/Torneos_1.jpg,/Fotos/Torneos_2.jpg,/Fotos/Torneos_3.jpg,/Fotos/Torneos_4.jpg,/Fotos/Torneos_5.jpg,/Fotos/Torneos_6.jpg,/Fotos/Torneos_7.jpg,/Fotos/Torneos_8.jpg">
+						<button class="torneos__carousel-arrow torneos__carousel-arrow--prev" id="carousel-prev">‹</button>
+						<div class="torneos__carousel-viewer">
+							<img class="torneos__carousel-image" src="/Fotos/Torneos_1.jpg" alt="Host gallery" data-index="0" />
+						</div>
+						<button class="torneos__carousel-arrow torneos__carousel-arrow--next" id="carousel-next">›</button>
+					</div>
+				</div>
+
+				<section class="torneos__calendar">
+					<h2 class="torneos__title">Calendar</h2>
+					<div id="fc-calendar"></div>
+				</section>
+
+				<div class="torneos__wp-banner">
+					<img class="torneos__wp-image" src="/Fotos/Banner_torneos-WP.png" alt="Join WhatsApp channel">
+					<div class="torneos__wp-text">
+						<h3 class="torneos__wp-title">Don't miss any tournament</h3>
+						<p class="torneos__wp-text-sub">
+							Dates, spots and Unmatched updates in Argentina
+						</p>
+						<p>
+							Early access to launches
+						</p>
+						<button class="torneos__wp-button">
+							<img src="/Fotos/Whatsapp-icon.webp">
+							<h3>Join WhatsApp channel</h3>
+						</button>
+					</div>
 				</div>
 			</section>
 		</main>
 
 		<Footer />
 	</div>
+
+<script type="module">
+	import { Calendar } from 'https://esm.sh/@fullcalendar/core@6.1.20';
+	import dayGridPlugin from 'https://esm.sh/@fullcalendar/daygrid@6.1.20';
+	import timeGridPlugin from 'https://esm.sh/@fullcalendar/timegrid@6.1.20';
+	import googleCalendarPlugin from 'https://esm.sh/@fullcalendar/google-calendar@6.1.20';
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const el = document.getElementById('fc-calendar');
+		if (!el) return;
+		const calendar = new Calendar(el, {
+			plugins: [dayGridPlugin, timeGridPlugin, googleCalendarPlugin],
+			initialView: 'dayGridMonth',
+			buttonText: { today: 'Today', month: 'Month', week: 'Week', day: 'Day' },
+			googleCalendarApiKey: 'YOUR_API_KEY',
+			events: { googleCalendarId: 'YOUR_CALENDAR_ID' },
+			timeZone: 'America/Argentina/Buenos_Aires',
+			height: 'auto',
+			headerToolbar: { left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay' },
+			eventClick(info) {
+				if (info.event.url) {
+					info.jsEvent.preventDefault();
+					window.open(info.event.url, '_blank');
+				}
+			}
+		});
+		calendar.render();
+	});
+</script>
+
 </MainLayout>
+
+<script>
+	const initializeCarousel = (container: HTMLElement) => {
+		const imageList = (container.dataset.carouselImages || '')
+			.split(',')
+			.map((imagePath: string) => imagePath.trim())
+			.filter(Boolean)
+
+		const image = container.querySelector<HTMLImageElement>('.torneos__carousel-image')
+		const prevButton = container.querySelector<HTMLButtonElement>('.torneos__carousel-arrow--prev')
+		const nextButton = container.querySelector<HTMLButtonElement>('.torneos__carousel-arrow--next')
+
+		if (!image || !prevButton || !nextButton || imageList.length === 0) {
+			return
+		}
+
+		let currentIndex = 0
+
+		const renderImage = () => {
+			image.src = imageList[currentIndex]
+			image.dataset.index = String(currentIndex)
+		}
+
+		renderImage()
+
+		prevButton.addEventListener('click', () => {
+			currentIndex = (currentIndex - 1 + imageList.length) % imageList.length
+			renderImage()
+		})
+
+		nextButton.addEventListener('click', () => {
+			currentIndex = (currentIndex + 1) % imageList.length
+			renderImage()
+		})
+	}
+
+	const bootCarousel = () => {
+		document
+			.querySelectorAll<HTMLElement>('.torneos__carousel-container')
+			.forEach((container) => initializeCarousel(container))
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', bootCarousel)
+	} else {
+		bootCarousel()
+	}
+</script>

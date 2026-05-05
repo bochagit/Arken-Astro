@@ -80,9 +80,136 @@ import '../../styles/torneos.css'
 						</div>
 					</details>
 				</div>
+
+				<div class="torneos__organiza-section">
+					<div class="torneos__organiza-content">
+						<h2 class="torneos__organiza-title">Organizá torneos oficiales</h2>
+						<p class="torneos__organiza-subtitle">Sumate como anfitrión y forma parte del circuito de Unmatched en Argentina</p>
+						<ul class="torneos__organiza-benefits">
+							<li>Usa formatos oficiales (Conscript, 2vs2, Rooster)</li>
+							<li>Difusión en canales de Arken Games</li>
+							<li>Premios oficiales</li>
+							<li>Sumate al crecimiento de la comunidad</li>
+						</ul>
+						<button class="torneos__organiza-button">Postularme como anfitrión</button>
+					</div>
+					<div class="torneos__carousel-container" data-carousel-images="/Fotos/Torneos_1.jpg,/Fotos/Torneos_2.jpg,/Fotos/Torneos_3.jpg,/Fotos/Torneos_4.jpg,/Fotos/Torneos_5.jpg,/Fotos/Torneos_6.jpg,/Fotos/Torneos_7.jpg,/Fotos/Torneos_8.jpg">
+						<button class="torneos__carousel-arrow torneos__carousel-arrow--prev" id="carousel-prev">‹</button>
+						<div class="torneos__carousel-viewer">
+							<img class="torneos__carousel-image" src="/Fotos/Torneos_1.jpg" alt="Galería anfitrión" data-index="0" />
+						</div>
+						<button class="torneos__carousel-arrow torneos__carousel-arrow--next" id="carousel-next">›</button>
+					</div>
+				</div>
+
+				<section class="torneos__calendar">
+					<h2 class="torneos__title">Calendario</h2>
+					<div id="fc-calendar"></div>
+				</section>
+
+				<div class="torneos__wp-banner">
+					<img class="torneos__wp-image" src="/Fotos/Banner_torneos-WP.png" alt="Unirse al canal de WhatsApp">
+					<div class="torneos__wp-text">
+						<h3 class="torneos__wp-title">No te pierdas ningún torneo</h3>
+						<p class="torneos__wp-text-sub">
+							Fechas, cupos y novedades de Unmatched en Argentina
+						</p>
+						<p>
+							Acceso anticipado a lanzamientos
+						</p>
+						<button class="torneos__wp-button">
+							<img src="/Fotos/Whatsapp-icon.webp">
+							<h3>Unirme al canal de WhatsApp</h3>
+						</button>
+					</div>
+				</div>
 			</section>
 		</main>
 
 		<Footer />
 	</div>
+<script type="module"> 
+	import { Calendar } from 'https://esm.sh/@fullcalendar/core@6.1.20';
+	import dayGridPlugin from 'https://esm.sh/@fullcalendar/daygrid@6.1.20'; 
+	import timeGridPlugin from 'https://esm.sh/@fullcalendar/timegrid@6.1.20';
+	import googleCalendarPlugin from 'https://esm.sh/@fullcalendar/google-calendar@6.1.20'; 
+	import esLocale from 'https://esm.sh/@fullcalendar/core@6.1.20/locales/es';
+	
+	document.addEventListener('DOMContentLoaded', () => { 
+		const el = document.getElementById('fc-calendar')
+		if (!el) return 
+		const calendar = new Calendar(el, {
+			plugins: [dayGridPlugin, timeGridPlugin, googleCalendarPlugin],
+			initialView: 'dayGridMonth',
+			locales: [esLocale],
+			locale: 'es',
+			buttonText: {
+				today: 'Hoy',
+				month: 'Mes',
+				week: 'Semana',
+				day: 'Día'
+			},
+			googleCalendarApiKey: 'YOUR_API_KEY',
+			events: { googleCalendarId: 'YOUR_CALENDAR_ID' },
+			timeZone: 'America/Argentina/Buenos_Aires',
+			height: 'auto',
+			headerToolbar: { left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay' },
+			
+			eventClick(info) { 
+				if (info.event.url) { 
+					info.jsEvent.preventDefault() 
+					window.open(info.event.url, '_blank') 
+					} 
+				} 
+			}) 
+		calendar.render() 
+	})
+</script>
 </MainLayout>
+<script>
+	const initializeCarousel = (container: HTMLElement) => {
+		const imageList = (container.dataset.carouselImages || '')
+			.split(',')
+			.map((imagePath: string) => imagePath.trim())
+			.filter(Boolean)
+
+		const image = container.querySelector<HTMLImageElement>('.torneos__carousel-image')
+		const prevButton = container.querySelector<HTMLButtonElement>('.torneos__carousel-arrow--prev')
+		const nextButton = container.querySelector<HTMLButtonElement>('.torneos__carousel-arrow--next')
+
+		if (!image || !prevButton || !nextButton || imageList.length === 0) {
+			return
+		}
+
+		let currentIndex = 0
+
+		const renderImage = () => {
+			image.src = imageList[currentIndex]
+			image.dataset.index = String(currentIndex)
+		}
+
+		renderImage()
+
+		prevButton.addEventListener('click', () => {
+			currentIndex = (currentIndex - 1 + imageList.length) % imageList.length
+			renderImage()
+		})
+
+		nextButton.addEventListener('click', () => {
+			currentIndex = (currentIndex + 1) % imageList.length
+			renderImage()
+		})
+	}
+
+	const bootCarousel = () => {
+		document
+			.querySelectorAll<HTMLElement>('.torneos__carousel-container')
+			.forEach((container) => initializeCarousel(container))
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', bootCarousel)
+	} else {
+		bootCarousel()
+	}
+</script>
