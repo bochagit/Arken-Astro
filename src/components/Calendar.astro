@@ -1,0 +1,68 @@
+---
+interface Props {
+    googleCalendarApiKey: string;
+    googleCalendarId: string;
+    locale?: string;
+    buttonText?: {
+        today?: string;
+        month?: string;
+        week?: string;
+        day?: string;
+    };
+}
+
+const {
+    googleCalendarApiKey,
+    googleCalendarId,
+    locale = 'en',
+    buttonText = {
+        today: 'Today',
+        month: 'Month',
+        week: 'Week',
+        day: 'Day'
+    }
+} = Astro.props;
+---
+
+<section class="torneos__calendar">
+    <h2 class="torneos__title">{locale === 'es' ? 'Calendario' : 'Calendar'}</h2>
+    <div id="fc-calendar"></div>
+</section>
+
+<script define:vars={{ googleCalendarApiKey, googleCalendarId, locale, buttonText }} type="module">
+    import { Calendar } from 'https://esm.sh/@fullcalendar/core@6.1.20';
+    import dayGridPlugin from 'https://esm.sh/@fullcalendar/daygrid@6.1.20';
+    import timeGridPlugin from 'https://esm.sh/@fullcalendar/timegrid@6.1.20';
+    import googleCalendarPlugin from 'https://esm.sh/@fullcalendar/google-calendar@6.1.20';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+        const el = document.getElementById('fc-calendar');
+        if (!el) return;
+
+        const calendarConfig = {
+            plugins: [dayGridPlugin, timeGridPlugin, googleCalendarPlugin],
+            initialView: 'dayGridMonth',
+            googleCalendarApiKey: googleCalendarApiKey,
+            events: { googleCalendarId: googleCalendarId },
+            timeZone: 'America/Argentina/Buenos_Aires',
+            height: 'auto',
+            headerToolbar: { left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay' },
+            buttonText: buttonText,
+            eventClick(info) {
+                if (info.event.url) {
+                    info.jsEvent.preventDefault();
+                    window.open(info.event.url, '_blank');
+                }
+            }
+        };
+
+        if (locale === 'es') {
+            const esLocale = await import('https://esm.sh/@fullcalendar/core@6.1.20/locales/es.js').then(m => m.default);
+            calendarConfig.locales = [esLocale];
+            calendarConfig.locale = 'es';
+        }
+
+        const calendar = new Calendar(el, calendarConfig);
+        calendar.render();
+    });
+</script>
