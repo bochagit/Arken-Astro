@@ -132,7 +132,7 @@
 
 .torneos__content-image {
 	display: block;
-	width: 100%;
+	width: 75%;
 	height: auto;
 	object-fit: contain;
 	border-radius: 0;
@@ -189,7 +189,7 @@
 
 .torneos__wp-banner {
 	position: relative;
-	margin-top: 5rem;
+	margin-block: 5rem;
 }
 
 .torneos__wp-image {
@@ -507,7 +507,7 @@
 }
 
 .torneos__calendar .fc .fc-daygrid-day-frame {
-	min-height: 6.5rem;
+	min-height: 3.5rem;
 }
 
 .torneos__calendar .fc .fc-daygrid-day.fc-day-today {
