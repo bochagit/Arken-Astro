@@ -69,9 +69,8 @@
 	overflow: visible;
 }
 
-.torneos__item summary {
+.torneos__item-title {
 	list-style: none;
-	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -83,22 +82,6 @@
 	font-size: clamp(0.95rem, 1.1vw, 1.08rem);
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
-}
-
-.torneos__item summary::-webkit-details-marker {
-	display: none;
-}
-
-.torneos__item summary::after {
-	content: '+';
-	font-family: 'Lora';
-	font-size: 1.4rem;
-	line-height: 1;
-	opacity: 0.9;
-}
-
-.torneos__item[open] summary::after {
-	content: '-';
 }
 
 .torneos__content {
@@ -232,6 +215,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-decoration: none;
+	color: #000;
 	gap: 1rem;
 	background-color: #25D366;
 	border: none;
@@ -339,7 +324,6 @@
 .torneos__organiza-button:hover {
 	background-color: transparent;
 	color: var(--hunyadi-yellow);
-	transform: translateX(4px);
 }
 
 /* Carousel Styles */
@@ -401,7 +385,7 @@
 }
 
 .torneos__calendar {
-	margin-top: 4rem;
+	margin-top: 2rem;
 	padding: clamp(1.25rem, 2.5vw, 2rem);
 	border: 1px solid #ffffff24;
 	background: linear-gradient(180deg, rgba(6, 8, 19, 0.72), rgba(10, 13, 28, 0.86));
@@ -409,10 +393,35 @@
 	backdrop-filter: blur(4px);
 }
 
-.torneos__calendar .torneos__title {
-	margin-top: 0;
-	margin-bottom: 1.25rem;
+.torneos__calendar-layout {
+	display: grid;
+	grid-template-columns: minmax(220px, 30%) minmax(0, 70%);
+	gap: 1.5rem;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.torneos__calendar-copy {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 0.85rem;
+	padding-top: 0.5rem;
+}
+
+.torneos__calendar-title {
+	margin: 0;
 	text-align: left;
+	font-weight: 500;
+	font-size: 1.8rem;
+	color: var(--hunyadi-yellow);
+}
+
+.torneos__calendar-description {
+	margin: 0;
+	text-align: left;
+	font-size: 1.05rem;
+	line-height: 1.6;
 }
 
 .torneos__calendar #fc-calendar {
@@ -627,8 +636,16 @@
 	}
 
 	.torneos__calendar {
-		margin-top: 3rem;
 		padding: 1rem;
+	}
+
+	.torneos__calendar-layout {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.torneos__calendar-copy {
+		padding-top: 0;
 	}
 
 	.torneos__calendar .torneos__title {
