@@ -15,6 +15,10 @@ export function useTranslations(lang: Language) {
 }
 
 export function getRelativeLocaleUrl(lang: Language, path = ''): string {
+	if (lang === defaultLanguage) {
+		return path === '' ? '/' : path
+	}
+
 	return `/${lang}${path}`
 }
 

@@ -1,3 +1,216 @@
 ---
-return Astro.redirect('/es/torneos')
+import MainLayout from '../layouts/MainLayout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Calendar from '../components/Calendar.astro'
+import '../styles/torneos.css'
 ---
+
+<MainLayout title="Torneos | Arken">
+	<div class="wallpaper__overlay">
+		<Header />
+
+		<main class="torneos">
+			<section class="torneos__intro">
+				<img src="/Fotos/Torneos_banner.webp" alt="Banner torneos" class="torneos__banner" />
+				<h2 class="torneos__title">Formatos de torneos</h2>
+				<div class="torneos__accordion">
+					<div class="torneos__item torneos__item--red">
+						<h3 class="torneos__item-title">Conscript</h3>
+						<div class="torneos__content">
+							<div class="torneos__content-grid">
+								<img
+									src="/Fotos/CONSCRIPT.png"
+									alt="Formato Conscript"
+									class="torneos__content-image"
+								/>
+								<div class="torneos__content-copy">
+									<h3>Formato de eliminación donde construís tu equipo a medida que avanzás.</h3>
+									<ul>
+										<li>Torneo 1 vs 1 de eliminación directa. Cada ronda es una partida única.</li>
+										<li>Cada jugador comienza con 2 personajes asignados.</li>
+										<li>Al ganar una ronda, descartás el personaje ganador.</li>
+										<li>Incorporás todos los personajes de tu rival a tu roster.</li>
+										<li>Elegís 3 personajes para la siguiente ronda.</li>
+										<li>
+											Ideal para jugadores que buscan partidas dinámicas y adaptación constante.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="torneos__item torneos__item--blue">
+						<h3 class="torneos__item-title">Rooster</h3>
+						<div class="torneos__content">
+							<div class="torneos__content-grid torneos__content-grid--reverse">
+								<img src="/Fotos/ROSTER.png" alt="Formato Rooster" class="torneos__content-image" />
+								<div class="torneos__content-copy">
+									<h3>Formato competitivo avanzado con múltiples partidas por ronda</h3>
+									<ul>
+										<li>Torneo competitivo 1 vs 1 en formato suizo, con dos partidas por ronda.</li>
+										<li>Cada jugador registra un roster de 4 personajes</li>
+										<li>En cada ronda se proponen 2 enfrentamientos posibles</li>
+										<li>El primero se define al azar (vale 1 punto)</li>
+										<li>El ganador elige el segundo enfrentamiento (vale 2 puntos)</li>
+									</ul>
+									<p>Pensado para jugadores con experiencia que buscan profundidad estratégica</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="torneos__item torneos__item--purple">
+						<h3 class="torneos__item-title">2v2</h3>
+						<div class="torneos__content">
+							<div class="torneos__content-grid">
+								<img src="/Fotos/2VS2.png" alt="Formato 2 vs 2" class="torneos__content-image" />
+								<div class="torneos__content-copy">
+									<h3>Formato en equipo donde la coordinación se une a la estrategia</h3>
+									<p>
+										Torneo en equipos de 2 jugadores, en formato suizo. Se juega una partida por
+										ronda.
+									</p>
+									<ul>
+										<li>Cada equipo arma un roster de 6 personajes compartidos</li>
+										<li>Antes de cada ronda, se banea 1 personaje del rival</li>
+										<li>Cada equipo elige 2 personajes para jugar</li>
+										<li>Se gana eliminando ambos héroes rivales</li>
+									</ul>
+									<p>Ideal para jugar en equipo y coordinar estrategias</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="torneos__wp-banner">
+					<img
+						class="torneos__wp-image"
+						src="/Fotos/Banner_torneos-WP.png"
+						alt="Unirse al canal de WhatsApp"
+					/>
+					<div class="torneos__wp-text">
+						<h3 class="torneos__wp-title">No te pierdas ningún torneo</h3>
+						<p class="torneos__wp-text-sub">Fechas, cupos y novedades de Unmatched en Argentina</p>
+						<p>Acceso anticipado a lanzamientos</p>
+						<a
+							class="torneos__wp-button"
+							href="https://www.whatsapp.com/channel/0029Vb778MPDuMRbKemcBv2n"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img src="/Fotos/Whatsapp-icon.webp" alt="WhatsApp" />
+							<h3>Unirme al canal de WhatsApp</h3>
+						</a>
+					</div>
+				</div>
+
+				<div class="torneos__organiza-section">
+					<div class="torneos__organiza-content">
+						<h2 class="torneos__organiza-title">Organizá torneos oficiales</h2>
+						<p class="torneos__organiza-subtitle">
+							Sumate como anfitrión y forma parte del circuito de Unmatched en Argentina
+						</p>
+						<ul class="torneos__organiza-benefits">
+							<li>Usa formatos oficiales (Conscript, 2vs2, Rooster)</li>
+							<li>Difusión en canales de Arken Games</li>
+							<li>Premios oficiales</li>
+							<li>Sumate al crecimiento de la comunidad</li>
+						</ul>
+						<a
+							class="torneos__organiza-button"
+							href="https://forms.gle/V4jsMjKvVyK3xZ5v5"
+							target="_blank"
+							rel="noopener noreferrer">Postularme como anfitrión</a
+						>
+					</div>
+					<div
+						class="torneos__carousel-container"
+						data-carousel-images="/Fotos/Torneos_1.jpg,/Fotos/Torneos_2.jpg,/Fotos/Torneos_3.jpg,/Fotos/Torneos_4.jpg,/Fotos/Torneos_5.jpg,/Fotos/Torneos_6.jpg,/Fotos/Torneos_7.jpg,/Fotos/Torneos_8.jpg"
+					>
+						<button class="torneos__carousel-arrow torneos__carousel-arrow--prev" id="carousel-prev"
+							>‹</button
+						>
+						<div class="torneos__carousel-viewer">
+							<img
+								class="torneos__carousel-image"
+								src="/Fotos/Torneos_1.jpg"
+								alt="Galería anfitrión"
+								data-index="0"
+							/>
+						</div>
+						<button class="torneos__carousel-arrow torneos__carousel-arrow--next" id="carousel-next"
+							>›</button
+						>
+					</div>
+				</div>
+
+				<Calendar
+					googleCalendarApiKey={import.meta.env.PUBLIC_GOOGLE_CALENDAR_API_KEY}
+					googleCalendarId={import.meta.env.PUBLIC_GOOGLE_CALENDAR_ID}
+					locale="es"
+					buttonText={{
+						today: 'Hoy',
+						month: 'Mes',
+						week: 'Semana',
+						day: 'Día'
+					}}
+				/>
+			</section>
+		</main>
+		<Footer />
+	</div>
+	<script>
+		const initializeCarousel = (container: HTMLElement) => {
+			const imageList = (container.dataset.carouselImages || '')
+				.split(',')
+				.map((imagePath: string) => imagePath.trim())
+				.filter(Boolean)
+
+			const image = container.querySelector<HTMLImageElement>('.torneos__carousel-image')
+			const prevButton = container.querySelector<HTMLButtonElement>(
+				'.torneos__carousel-arrow--prev'
+			)
+			const nextButton = container.querySelector<HTMLButtonElement>(
+				'.torneos__carousel-arrow--next'
+			)
+
+			if (!image || !prevButton || !nextButton || imageList.length === 0) {
+				return
+			}
+
+			let currentIndex = 0
+
+			const renderImage = () => {
+				image.src = imageList[currentIndex]
+				image.dataset.index = String(currentIndex)
+			}
+
+			renderImage()
+
+			prevButton.addEventListener('click', () => {
+				currentIndex = (currentIndex - 1 + imageList.length) % imageList.length
+				renderImage()
+			})
+
+			nextButton.addEventListener('click', () => {
+				currentIndex = (currentIndex + 1) % imageList.length
+				renderImage()
+			})
+		}
+
+		const bootCarousel = () => {
+			document
+				.querySelectorAll<HTMLElement>('.torneos__carousel-container')
+				.forEach((container) => initializeCarousel(container))
+		}
+
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', bootCarousel)
+		} else {
+			bootCarousel()
+		}
+	</script>
+</MainLayout>

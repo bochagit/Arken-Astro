@@ -1,9 +1,16 @@
 ---
-import { getLangFromUrl, useTranslations, getRelativeLocaleUrl, type Language } from '../i18n/utils'
+import {
+	getLangFromUrl,
+	useTranslations,
+	getRelativeLocaleUrl,
+	getPathWithoutLocale,
+	type Language
+} from '../i18n/utils'
 
 const lang = getLangFromUrl(Astro.url) as Language
 const t = useTranslations(lang)
-const pathWithoutLocale = Astro.url.pathname.replace(/^\/(es|en)/, '')
+const pathWithoutLocale = getPathWithoutLocale(Astro.url.pathname)
+const localePath = pathWithoutLocale === '/' ? '' : pathWithoutLocale
 ---
 
 <header class="header">
@@ -41,11 +48,11 @@ const pathWithoutLocale = Astro.url.pathname.replace(/^\/(es|en)/, '')
 			>
 		</div>
 		<div class="lang-switcher">
-			<a href={`/es${pathWithoutLocale}`} class={`lang-link ${lang === 'es' ? 'active' : ''}`}>
+			<a href={pathWithoutLocale} class={`lang-link ${lang === 'es' ? 'active' : ''}`}>
 				ES
 			</a>
 			<span class="lang-divider">/</span>
-			<a href={`/en${pathWithoutLocale}`} class={`lang-link ${lang === 'en' ? 'active' : ''}`}>
+			<a href={getRelativeLocaleUrl('en', localePath)} class={`lang-link ${lang === 'en' ? 'active' : ''}`}>
 				EN
 			</a>
 		</div>

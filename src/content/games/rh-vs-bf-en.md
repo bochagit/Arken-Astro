@@ -37,7 +37,7 @@ Because it includes **two exclusive maps** (Sherwood Forest and Yukon), which no
 
 ## - Maps -
 
-<ul class="main__list-description --maps">
+<ul class="main__list-description">
   <li class="main__description-item main__text">
       <p>
           <strong>Sherwood Forest:</strong> a map filled with trees, rocks, and bushes creating natural obstacles and cover zones, perfect for tactical ranged duels. This environment favors strategic play and the nimble mobility of Robin Hood and his banditos, who can use the terrain to flank and attack from safe points. Multiple niches and paths enable ambush maneuvers and smart retreats.

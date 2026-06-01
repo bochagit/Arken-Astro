@@ -54,7 +54,7 @@ Ideal for collectors and players seeking variety and unlimited replayability: th
 
 ## - Maps -
 
-<ul class="main__list-description --maps">
+<ul class="main__list-description">
   <li class="main__description-item main__text">
       <p>
           <strong>Sarpedon:</strong> a battlefield with well-defined zones and narrow paths, ideal for control strategies and ambushes. This map favors both close combat and tactical maneuvers, allowing players to leverage terrain for positioning and planning their attacks.
