@@ -56,7 +56,7 @@ Ideal para coleccionistas y jugadores que buscan variedad y rejugabilidad sin l√
 
 ## - Mapas -
 
-<ul class="main__list-description --maps">
+<ul class="main__list-description ">
   <li class="main__description-item main__text">
       <p>
           <strong>Sarpedon:</strong> un campo de batalla con zonas bien definidas y caminos estrechos, ideal para estrategias de control y emboscadas. Este mapa favorece tanto los combates cuerpo a cuerpo como las maniobras t√°cticas, permitiendo que los jugadores aprovechen el terreno para posicionarse y planificar sus ataques.
