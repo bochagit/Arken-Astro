@@ -1,17 +1,17 @@
 ---
-title: "Sunrise Sunset"
-banner: "/Fotos/Juego_banner_Sunrise.webp"
-box: "/Fotos/Sunrise_caja.webp"
-players: "2"
-duration: "10-30"
-age: "8+"
-gallery: 
-  - "/Fotos/Sunrise-Sunset_1.webp"
-  - "/Fotos/Sunrise-Sunset_2.webp"
+title: 'Sunrise Sunset'
+banner: '/Fotos/Juego_banner_Sunrise.webp'
+box: '/Fotos/Sunrise_caja.webp'
+players: '2'
+duration: '10-30'
+age: '8+'
+gallery:
+  - '/Fotos/Sunrise-Sunset_1.webp'
+  - '/Fotos/Sunrise-Sunset_2.webp'
 relatedGames:
-  - "rh-vs-bf"
-  - "vol1"
-buyUrl: "https://arkengames.mitiendanube.com/productos/sunrise-sunset/"
+  - 'rh-vs-bf'
+  - 'vol1'
+# buyUrl: "https://arkengames.mitiendanube.com/productos/sunrise-sunset/"
 ---
 
 En **Sunrise Sunset** dos dioses se enfrentan por el control del ciclo solar.

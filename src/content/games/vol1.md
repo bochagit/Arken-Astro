@@ -1,23 +1,23 @@
 ---
-title: "Unmatched: Battle of legends: Volume I"
-banner: "/Fotos/Juego_banner_Vol1.jpg"
-box: "/Fotos/Vol1_caja.webp"
-players: "2-4"
-duration: "20-40"
-age: "9+"
-gallery: 
-  - "/Fotos/Vol1_1.webp"
-  - "/Fotos/Vol1_2.webp"
-  - "/Fotos/Vol1_3.webp"
+title: 'Unmatched: Battle of legends: Volume I'
+banner: '/Fotos/Juego_banner_Vol1.jpg'
+box: '/Fotos/Vol1_caja.webp'
+players: '2-4'
+duration: '20-40'
+age: '9+'
+gallery:
+  - '/Fotos/Vol1_1.webp'
+  - '/Fotos/Vol1_2.webp'
+  - '/Fotos/Vol1_3.webp'
 youtubeUrls:
-  - "https://www.youtube.com/watch?v=vedzR0YdADI"
+  - 'https://www.youtube.com/watch?v=vedzR0YdADI'
 relatedGames:
-  - "rh-vs-bf"
-  - "sunrise"
-buyUrl: "https://arkengames.mitiendanube.com/productos/unmatchedvol1/"
+  - 'rh-vs-bf'
+  - 'sunrise'
+# buyUrl: "https://arkengames.mitiendanube.com/productos/unmatchedvol1/"
 ---
 
-**Arken Games** presenta la primera caja de *Unmatched*, un juego de miniaturas y cartas asimétrico para 2 a 4 jugadores, donde héroes legendarios de distintos universos se enfrentan en combates únicos y dinámicos.
+**Arken Games** presenta la primera caja de _Unmatched_, un juego de miniaturas y cartas asimétrico para 2 a 4 jugadores, donde héroes legendarios de distintos universos se enfrentan en combates únicos y dinámicos.
 
 ## - Héroes y ayudantes -
 
@@ -50,9 +50,9 @@ Diseñado para partidas rápidas de 20-40 minutos, fáciles de aprender pero con
 
 Cada héroe trae un mazo único, lo que garantiza experiencias diferentes en cada partida.
 
-**¡Todo es compatible!** Todos los juegos y expansiones de *Unmatched* se pueden combinar entre sí: podés enfrentar a Medusa contra Robin Hood, a Simbad contra Bigfoot, o llevar a cualquiera de los héroes de esta caja a batallas épicas en los tableros de otras ediciones.
+**¡Todo es compatible!** Todos los juegos y expansiones de _Unmatched_ se pueden combinar entre sí: podés enfrentar a Medusa contra Robin Hood, a Simbad contra Bigfoot, o llevar a cualquiera de los héroes de esta caja a batallas épicas en los tableros de otras ediciones.
 
-Ideal para coleccionistas y jugadores que buscan variedad y rejugabilidad sin límites: el universo *Unmatched* crece constantemente, y cada nuevo personaje amplía las posibilidades de enfrentamientos legendarios.
+Ideal para coleccionistas y jugadores que buscan variedad y rejugabilidad sin límites: el universo _Unmatched_ crece constantemente, y cada nuevo personaje amplía las posibilidades de enfrentamientos legendarios.
 
 ## - Mapas -
 

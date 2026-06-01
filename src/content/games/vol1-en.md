@@ -1,21 +1,21 @@
 ---
-title: "Unmatched: Battle of legends: Volume I"
-banner: "/Fotos/Juego_banner_Vol1.jpg"
-box: "/Fotos/Vol1_caja.webp"
-players: "2-4"
-duration: "20-40"
-age: "9+"
-gallery: 
-  - "/Fotos/Vol1_1.webp"
-  - "/Fotos/Vol1_2.webp"
-  - "/Fotos/Vol1_3.webp"
+title: 'Unmatched: Battle of legends: Volume I'
+banner: '/Fotos/Juego_banner_Vol1.jpg'
+box: '/Fotos/Vol1_caja.webp'
+players: '2-4'
+duration: '20-40'
+age: '9+'
+gallery:
+  - '/Fotos/Vol1_1.webp'
+  - '/Fotos/Vol1_2.webp'
+  - '/Fotos/Vol1_3.webp'
 relatedGames:
-  - "rh-vs-bf-en"
-  - "sunrise-en"
-buyUrl: "https://arkengames.mitiendanube.com/productos/unmatchedvol1/"
+  - 'rh-vs-bf-en'
+  - 'sunrise-en'
+# buyUrl: "https://arkengames.mitiendanube.com/productos/unmatchedvol1/"
 ---
 
-**Arken Games** presents the first edition of *Unmatched*, an asymmetric miniatures and card game for 2 to 4 players, where legendary heroes from different universes face off in unique and dynamic combat.
+**Arken Games** presents the first edition of _Unmatched_, an asymmetric miniatures and card game for 2 to 4 players, where legendary heroes from different universes face off in unique and dynamic combat.
 
 ## - Heroes and Allies -
 
@@ -48,9 +48,9 @@ Designed for quick 20-40 minute games, easy to learn but with great tactical dep
 
 Each hero brings a unique deck, ensuring different experiences in every game.
 
-**Everything is compatible!** All *Unmatched* games and expansions can be combined with each other: you can pit Medusa against Robin Hood, Sinbad against Bigfoot, or take any of the heroes from this box to epic battles on boards from other editions.
+**Everything is compatible!** All _Unmatched_ games and expansions can be combined with each other: you can pit Medusa against Robin Hood, Sinbad against Bigfoot, or take any of the heroes from this box to epic battles on boards from other editions.
 
-Ideal for collectors and players seeking variety and unlimited replayability: the *Unmatched* universe grows constantly, and each new character expands the possibilities for legendary matchups.
+Ideal for collectors and players seeking variety and unlimited replayability: the _Unmatched_ universe grows constantly, and each new character expands the possibilities for legendary matchups.
 
 ## - Maps -
 

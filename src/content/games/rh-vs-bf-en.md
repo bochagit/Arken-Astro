@@ -1,18 +1,18 @@
 ---
-title: "Unmatched: Robin Hood vs. BigFoot"
-banner: "/Fotos/Juego_banner_RHvsBF.jpg"
-box: "/Fotos/RHvsBF_caja.webp"
-players: "2"
-duration: "20"
-age: "9+"
-gallery: 
-  - "/Fotos/RHvsBF_1.webp"
-  - "/Fotos/RHvsBF_2.webp"
-  - "/Fotos/RHvsBF_3.webp"
+title: 'Unmatched: Robin Hood vs. BigFoot'
+banner: '/Fotos/Juego_banner_RHvsBF.jpg'
+box: '/Fotos/RHvsBF_caja.webp'
+players: '2'
+duration: '20'
+age: '9+'
+gallery:
+  - '/Fotos/RHvsBF_1.webp'
+  - '/Fotos/RHvsBF_2.webp'
+  - '/Fotos/RHvsBF_3.webp'
 relatedGames:
-  - "vol1-en"
-  - "sunrise-en"
-buyUrl: "https://arkengames.mitiendanube.com/productos/robinhoodvsbigfoot/"
+  - 'vol1-en'
+  - 'sunrise-en'
+# buyUrl: "https://arkengames.mitiendanube.com/productos/robinhoodvsbigfoot/"
 ---
 
 **Arken Games** brings this epic clash between legends: the cunning **Robin Hood** against the colossal **Bigfoot**, in a 1v1 asymmetric battle packed with tactics, fun, and miniatures.

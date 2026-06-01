@@ -12,7 +12,7 @@ gallery:
 relatedGames:
   - 'vol1'
   - 'sunrise'
-# youtubeUrl: 'https://www.youtube.com/shorts/k5zEqcSVLqU'
+youtubeUrl: 'https://www.youtube.com/shorts/k5zEqcSVLqU'
 ---
 
 **Arken Games** presents _Cofre De Baratijas_, a family betting and set-collection game where players compete to gather the most valuable treasure sets.
