@@ -11,7 +11,7 @@
 
 .torneos__banner {
 	display: block;
-	width: min(100%, 750px);
+	width: min(100%, 1000px);
 	height: auto;
 	margin: 0 auto 1rem;
 	object-fit: contain;
@@ -218,16 +218,18 @@
 	text-decoration: none;
 	color: #000;
 	gap: 1rem;
-	background-color: #25D366;
+	background-color: #25d366;
 	border: none;
 	padding: 0.45rem 0.85rem;
 	border-radius: 1rem;
-	transition: background-color .2s, transform .2s;
+	transition:
+		background-color 0.2s,
+		transform 0.2s;
 }
 
 .torneos__wp-button:hover {
-	background-color: #25D36699;
-	border: 1px solid #25D366;
+	background-color: #25d36699;
+	border: 1px solid #25d366;
 	transform: scale(1.01);
 	cursor: pointer;
 }
@@ -464,7 +466,11 @@
 	letter-spacing: 0.05em;
 	background: rgba(255, 255, 255, 0.08);
 	color: var(--ghost-white);
-	transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+	transition:
+		background-color 0.2s,
+		color 0.2s,
+		border-color 0.2s,
+		transform 0.2s;
 }
 
 .torneos__calendar .fc .fc-button:hover,
@@ -565,7 +571,7 @@
 	}
 
 	.torneos__banner {
-		width: min(100%, 420px);
+		width: 100%;
 	}
 
 	.torneos__heading-line {

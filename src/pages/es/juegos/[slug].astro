@@ -32,13 +32,36 @@ const relatedGamesList = game.data.relatedGames
 function getYouTubeEmbedUrl(url?: string): string | null {
 	if (!url) return null
 
-	const match = url.match(
-		/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([A-Za-z0-9_-]{11})/
-	)
+	try {
+		const parsedUrl = new URL(url)
+		const hostname = parsedUrl.hostname.replace(/^www\./, '')
+		let videoId: string | null = null
 
-	if (!match) return null
+		if (hostname === 'youtu.be') {
+			videoId = parsedUrl.pathname.split('/').filter(Boolean)[0] ?? null
+		} else if (hostname === 'youtube.com' || hostname.endsWith('.youtube.com')) {
+			if (parsedUrl.pathname === '/watch') {
+				videoId = parsedUrl.searchParams.get('v')
+			} else {
+				const pathParts = parsedUrl.pathname.split('/').filter(Boolean)
+				if (pathParts[0] === 'embed' || pathParts[0] === 'shorts') {
+					videoId = pathParts[1] ?? null
+				}
+			}
+		}
 
-	return `https://www.youtube.com/embed/${match[1]}`
+		if (!videoId) return null
+
+		return `https://www.youtube.com/embed/${videoId}`
+	} catch {
+		const match = url.match(
+			/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/
+		)
+
+		if (!match) return null
+
+		return `https://www.youtube.com/embed/${match[1]}`
+	}
 }
 
 const youtubeLinks = [
@@ -210,7 +233,7 @@ const hasVideoContent = youtubeEmbedUrls.length > 0
 									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 									referrerpolicy="strict-origin-when-cross-origin"
 									allowfullscreen
-								></iframe>
+								/>
 							</div>
 						))}
 					</section>

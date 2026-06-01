@@ -7,6 +7,7 @@ const t = useTranslations(lang)
 const vol1Url = getRelativeLocaleUrl(lang, '/juegos/vol1')
 const rhVsBfUrl = getRelativeLocaleUrl(lang, '/juegos/rh-vs-bf')
 const sunriseUrl = getRelativeLocaleUrl(lang, '/juegos/sunrise')
+const cofreUrl = getRelativeLocaleUrl(lang, '/juegos/cofre-de-baratijas')
 ---
 
 <main class="slider" id="inicio">
@@ -44,8 +45,17 @@ const sunriseUrl = getRelativeLocaleUrl(lang, '/juegos/sunrise')
 				</div>
 			</a>
 		</div>
+		<div class="slider__item">
+			<a href={cofreUrl}>
+				<img src="/Fotos/Banner_Cofre.png" alt="Banner of Cofre De Baratijas" />
+				<div class="slider__button">
+					<a href={cofreUrl} class="slider__button-link">{t('main.moreInfo')}</a>
+				</div>
+			</a>
+		</div>
 	</div>
 	<div class="slider__nav">
+		<a href="javascript:void(0)"></a>
 		<a href="javascript:void(0)"></a>
 		<a href="javascript:void(0)"></a>
 		<a href="javascript:void(0)"></a>

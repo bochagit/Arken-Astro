@@ -13,7 +13,9 @@ const pathWithoutLocale = Astro.url.pathname.replace(/^\/(es|en)/, '')
 	</label>
 	<nav class="header__nav">
 		<div class="header__nav-group header__nav-group--left">
-			<a href="https://arkengames.mitiendanube.com/" rel="noopener noreferrer" target="_blank" class="header__nav-link">{t('nav.tienda')}</a>
+			<a rel="noopener noreferrer" target="_blank" class="header__nav-link --inactive"
+				>{t('nav.tienda')}...</a
+			>
 			<a href={getRelativeLocaleUrl(lang, '/')} class="header__nav-link">{t('nav.inicio')}</a>
 			<a href={getRelativeLocaleUrl(lang, '/juegos')} class="header__nav-link">{t('nav.juegos')}</a>
 		</div>
@@ -28,22 +30,22 @@ const pathWithoutLocale = Astro.url.pathname.replace(/^\/(es|en)/, '')
 		</div>
 
 		<div class="header__nav-group header__nav-group--right">
-			<a href={getRelativeLocaleUrl(lang, '/#quienes-somos')} class="header__nav-link">{t('nav.quienes')}</a>
-			<a href={getRelativeLocaleUrl(lang, '/#contact')} class="header__nav-link">{t('nav.contacto')}</a>
-			<a href={getRelativeLocaleUrl(lang, '/torneos')} class="header__nav-link">{t('nav.torneos')}</a>
+			<a href={getRelativeLocaleUrl(lang, '/#quienes-somos')} class="header__nav-link"
+				>{t('nav.quienes')}</a
+			>
+			<a href={getRelativeLocaleUrl(lang, '/#contact')} class="header__nav-link"
+				>{t('nav.contacto')}</a
+			>
+			<a href={getRelativeLocaleUrl(lang, '/torneos')} class="header__nav-link"
+				>{t('nav.torneos')}</a
+			>
 		</div>
 		<div class="lang-switcher">
-			<a
-				href={`/es${pathWithoutLocale}`}
-				class={`lang-link ${lang === 'es' ? 'active' : ''}`}
-			>
+			<a href={`/es${pathWithoutLocale}`} class={`lang-link ${lang === 'es' ? 'active' : ''}`}>
 				ES
 			</a>
 			<span class="lang-divider">/</span>
-			<a
-				href={`/en${pathWithoutLocale}`}
-				class={`lang-link ${lang === 'en' ? 'active' : ''}`}
-			>
+			<a href={`/en${pathWithoutLocale}`} class={`lang-link ${lang === 'en' ? 'active' : ''}`}>
 				EN
 			</a>
 		</div>
