@@ -54,10 +54,25 @@ youtubeUrl: 'https://www.youtube.com/shorts/k5zEqcSVLqU'
     <li>Formato ágil, perfecto para partidas rápidas</li>
     <li>Excelente opción como regalo</li>
   </ul>
-  <li class="main__description-item --img --boxes">
-    <img src="/Fotos/Cofre_caja.png" alt="Caja Cofre De Baratijas" class="main__description-img main__description-img--box">
-    <img src="/Fotos/Cofre_Caja_Reverso.png" alt="Caja Cofre De Baratijas reverso" class="main__description-img main__description-img--box">
-  </li>
+  <div
+    class="juegos__carousel-container"
+    data-carousel-images="/Fotos/Cofre_caja.png,/Fotos/Cofre_Caja_Reverso.png"
+  >
+    <button class="juegos__carousel-arrow juegos__carousel-arrow--prev" id="carousel-prev"
+      >‹</button
+    >
+    <div class="juegos__carousel-viewer">
+      <img
+        alt="Caja Cofre De Baratijas" 
+        class="juegos__carousel-image"
+        src="/Fotos/Cofre_caja.png"
+        data-index="0"
+      />
+    </div>
+    <button class="juegos__carousel-arrow juegos__carousel-arrow--next" id="carousel-next"
+      >›</button
+    >
+  </div>
 </div>
 
 ## - COMPONENTES -

@@ -73,7 +73,7 @@
 }
 
 .banner__container {
-	width: 80%;
+	width: 100%;
 	height: auto;
 	margin: auto;
 }
@@ -193,6 +193,37 @@
 	margin-right: auto;
 }
 
+.main__box-slider {
+	width: min(100%, 260px);
+	aspect-ratio: 1 / 1;
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	touch-action: pan-y;
+	border-radius: 0.9rem;
+	box-shadow: 0 0 2px var(--ghost-white);
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.main__box-slider::-webkit-scrollbar {
+	display: none;
+}
+
+.main__box-slide {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	scroll-snap-align: start;
+	display: block;
+	background: transparent;
+}
+
 .--img:hover {
 	opacity: 0.8;
 	filter: drop-shadow(0 0 5px var(--hunyadi-yellow));
@@ -245,6 +276,62 @@
 	opacity: 0.8;
 	filter: drop-shadow(0 0 5px var(--hunyadi-yellow));
 	transform: translateY(-10px);
+}
+
+.juegos__carousel-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	width: 400px;
+}
+
+.juegos__carousel-viewer {
+	position: relative;
+	width: 300px;
+	max-width: 100%;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+}
+
+.juegos__carousel-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.juegos__carousel-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: transparent;
+	border: none;
+	color: var(--ghost-white);
+	font-size: 2.5rem;
+	line-height: 1;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+	z-index: 10;
+}
+
+.juegos__carousel-arrow:hover {
+	transform: translateY(-50%) scale(1.2);
+}
+
+.juegos__carousel-arrow--prev {
+	left: 0;
+}
+
+.juegos__carousel-arrow--next {
+	right: 0;
 }
 
 /* ----- MAIN QUERIES ----- */
@@ -320,6 +407,10 @@
 		width: min(100%, 220px);
 	}
 
+	.main__box-slider {
+		width: min(100%, 220px);
+	}
+
 	.main__description-img--components {
 		width: min(100%, 250px);
 	}
@@ -386,7 +477,7 @@
 
 .gallery__video-item {
 	width: 100%;
-	aspect-ratio: 1 / 1;
+	aspect-ratio: 1 / 2;
 	border-radius: 0.85rem;
 	overflow: hidden;
 	box-shadow: 0 10px 24px #00000080;

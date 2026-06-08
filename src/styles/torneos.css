@@ -587,23 +587,39 @@
 	}
 
 	.torneos__content-grid {
-		grid-template-columns: 1fr;
-		gap: 1rem;
+		grid-template-columns: minmax(92px, 28%) minmax(0, 1fr);
+		gap: 0.9rem;
+		align-items: start;
+		grid-template-areas: 'image copy';
 	}
 
 	.torneos__content-grid--reverse {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr) minmax(92px, 28%);
+		grid-template-areas: 'copy image';
 	}
 
 	.torneos__content-grid--reverse .torneos__content-image,
 	.torneos__content-grid--reverse .torneos__content-copy {
-		grid-column: auto;
 		grid-row: auto;
 	}
 
+	.torneos__content-grid .torneos__content-image {
+		grid-area: image;
+	}
+
+	.torneos__content-grid .torneos__content-copy {
+		grid-area: copy;
+	}
+
 	.torneos__content-image {
-		max-width: 320px;
-		margin: 0 auto;
+		width: 100%;
+		max-width: 140px;
+		margin: 0;
+		justify-self: start;
+	}
+
+	.torneos__content-grid--reverse .torneos__content-image {
+		justify-self: end;
 	}
 
 	.torneos__organiza-section {
@@ -678,48 +694,56 @@
 
 	.torneos__wp-banner {
 		margin-top: 3rem;
-		display: grid;
-		grid-template-columns: 1fr;
+		overflow: hidden;
 	}
 
 	.torneos__wp-image {
-		max-height: 130px;
+		width: 100%;
+		height: auto;
 		object-fit: cover;
-		object-position: left center;
+		object-position: center;
 	}
 
 	.torneos__wp-text {
-		position: static;
-		background: #6da9b5;
-		padding: 0.75rem 0.8rem 1rem;
+		position: absolute;
+		inset: 0;
+		padding: 0.8rem 1rem;
+		background: transparent;
+		justify-content: center;
+		gap: 0.25rem;
 	}
 
 	.torneos__wp-title {
-		font-size: 1.05rem;
+		font-size: 0.95rem;
+		line-height: 1.1;
 	}
 
 	.torneos__wp-text-sub {
-		font-size: 0.95rem;
+		font-size: 0.8rem;
 		line-height: 1.2;
+		max-width: 24ch;
 	}
 
 	.torneos__wp-text p {
-		font-size: 0.92rem;
+		font-size: 0.78rem;
 		line-height: 1.2;
 	}
 
 	.torneos__wp-button {
-		width: min(500px, 95%);
-		gap: 0.7rem;
-		padding: 0.5rem 0.75rem;
+		width: min(500px, 88%);
+		gap: 0.55rem;
+		padding: 0.45rem 0.7rem;
+		margin-top: 0.4rem;
+		background-color: #25d366;
+		border-radius: 999px;
 	}
 
 	.torneos__wp-button img {
-		width: 1.35rem;
+		width: 1.15rem;
 	}
 
 	.torneos__wp-button h3 {
-		font-size: 1.25rem;
+		font-size: 1rem;
 		line-height: 1;
 	}
 }

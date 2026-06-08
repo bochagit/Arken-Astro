@@ -13,6 +13,12 @@ export const ui = {
 		'nav.quienes': 'Quienes somos',
 		'nav.contacto': 'Contacto',
 		'nav.torneos': 'Torneos',
+		'tournaments.title': 'Torneos y Eventos',
+		'tournaments.text1':
+			'Participá de torneos oficiales de Unmatched en todo el país, descubrí los próximos eventos y sumate a una comunidad de jugadores en constante crecimiento.',
+		'tournaments.text2':
+			'Consultá el calendario de competencias y conocé los distintos formatos de juego.',
+		'tournaments.button': 'Conocer mas',
 		'about.title': 'Quienes somos',
 		'about.text1':
 			'Arken Games es una editorial Argentina de juegos de mesa que cree que jugar es mucho más que entretenerse: es conectar, crear y compartir momentos reales.',
@@ -51,6 +57,12 @@ export const ui = {
 		'nav.quienes': 'About Us',
 		'nav.contacto': 'Contact',
 		'nav.torneos': 'Tournaments',
+		'tournaments.title': 'Tournaments & Events',
+		'tournaments.text1':
+			'Participate in official Unmatched tournaments across the country, discover upcoming events, and join a constantly growing community of players.',
+		'tournaments.text2':
+			'Check the competition schedule and learn about the different game formats.',
+		'tournaments.button': 'See more',
 		'about.title': 'About Us',
 		'about.text1':
 			'Arken Games is an Argentine board game publisher that believes playing is much more than entertainment: it is connecting, creating and sharing real moments.',

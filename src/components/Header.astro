@@ -48,11 +48,12 @@ const localePath = pathWithoutLocale === '/' ? '' : pathWithoutLocale
 			>
 		</div>
 		<div class="lang-switcher">
-			<a href={pathWithoutLocale} class={`lang-link ${lang === 'es' ? 'active' : ''}`}>
-				ES
-			</a>
+			<a href={pathWithoutLocale} class={`lang-link ${lang === 'es' ? 'active' : ''}`}> ES </a>
 			<span class="lang-divider">/</span>
-			<a href={getRelativeLocaleUrl('en', localePath)} class={`lang-link ${lang === 'en' ? 'active' : ''}`}>
+			<a
+				href={getRelativeLocaleUrl('en', localePath)}
+				class={`lang-link ${lang === 'en' ? 'active' : ''}`}
+			>
 				EN
 			</a>
 		</div>

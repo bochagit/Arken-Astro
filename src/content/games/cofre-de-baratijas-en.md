@@ -19,10 +19,10 @@ youtubeUrl: 'https://www.youtube.com/shorts/k5zEqcSVLqU'
 
 <div class="heroes__container">
   <img src="/Fotos/Cofre_Raton1.png" alt="Trinket Chest Characters" class="heroe__image">
-  <img src="/Fotos/Cofre_Raton1.png" alt="Trinket Chest Characters" class="heroe__image">
-  <img src="/Fotos/Cofre_Raton1.png" alt="Trinket Chest Characters" class="heroe__image">
-  <img src="/Fotos/Cofre_Raton1.png" alt="Trinket Chest Characters" class="heroe__image">
-  <img src="/Fotos/Cofre_Raton1.png" alt="Trinket Chest Characters" class="heroe__image">
+  <img src="/Fotos/Cofre_Raton2.png" alt="Trinket Chest Characters" class="heroe__image">
+  <img src="/Fotos/Cofre_Raton3.png" alt="Trinket Chest Characters" class="heroe__image">
+  <img src="/Fotos/Cofre_Raton4.png" alt="Trinket Chest Characters" class="heroe__image">
+  <img src="/Fotos/Cofre_Raton5.png" alt="Trinket Chest Characters" class="heroe__image">
 </div>
 
 ## - WHAT IS IT ABOUT? -
@@ -54,10 +54,25 @@ youtubeUrl: 'https://www.youtube.com/shorts/k5zEqcSVLqU'
     <li>Fast format, ideal for quick sessions</li>
     <li>An excellent gift option</li>
   </ul>
-  <li class="main__description-item --img --boxes">
-    <img src="/Fotos/Cofre_caja.png" alt="Trinket Chest Box" class="main__description-img main__description-img--box">
-    <img src="/Fotos/Cofre_Caja_Reverso.png" alt="Trinket Chest Box Back" class="main__description-img main__description-img--box">
-  </li>
+  <div
+    class="juegos__carousel-container"
+    data-carousel-images="/Fotos/Cofre_caja.png,/Fotos/Cofre_Caja_Reverso.png"
+  >
+    <button class="juegos__carousel-arrow juegos__carousel-arrow--prev" id="carousel-prev"
+      >‹</button
+    >
+    <div class="juegos__carousel-viewer">
+      <img
+        alt="Caja Cofre De Baratijas" 
+        class="juegos__carousel-image"
+        src="/Fotos/Cofre_caja.png"
+        data-index="0"
+      />
+    </div>
+    <button class="juegos__carousel-arrow juegos__carousel-arrow--next" id="carousel-next"
+      >›</button
+    >
+  </div>
 </div>
 
 ## - COMPONENTS -

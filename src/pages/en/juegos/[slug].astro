@@ -74,6 +74,7 @@ const youtubeEmbedUrls = youtubeLinks
 
 const hasGalleryContent = (game.data.gallery?.length ?? 0) > 0
 const hasVideoContent = youtubeEmbedUrls.length > 0
+const showPhotoCredit = game.id === 'vol1-en'
 ---
 
 <MainLayout title={game.data.title}>
@@ -209,7 +210,7 @@ const hasVideoContent = youtubeEmbedUrls.length > 0
 						))}
 					</section>
 
-					<span class="photo__copyright">Photos by Board Game Shot</span>
+					{showPhotoCredit && <span class="photo__copyright">Photos by Board Game Shot</span>}
 				</>
 			)
 		}
@@ -289,4 +290,51 @@ const hasVideoContent = youtubeEmbedUrls.length > 0
 			aria-label="Next photo">&#8250;</button
 		>
 	</div>
+	<script>
+		const initializeCarousel = (container: HTMLElement) => {
+			const imageList = (container.dataset.carouselImages || '')
+				.split(',')
+				.map((imagePath: string) => imagePath.trim())
+				.filter(Boolean)
+
+			const image = container.querySelector<HTMLImageElement>('.juegos__carousel-image')
+			const prevButton = container.querySelector<HTMLButtonElement>('.juegos__carousel-arrow--prev')
+			const nextButton = container.querySelector<HTMLButtonElement>('.juegos__carousel-arrow--next')
+
+			if (!image || !prevButton || !nextButton || imageList.length === 0) {
+				return
+			}
+
+			let currentIndex = 0
+
+			const renderImage = () => {
+				image.src = imageList[currentIndex]
+				image.dataset.index = String(currentIndex)
+			}
+
+			renderImage()
+
+			prevButton.addEventListener('click', () => {
+				currentIndex = (currentIndex - 1 + imageList.length) % imageList.length
+				renderImage()
+			})
+
+			nextButton.addEventListener('click', () => {
+				currentIndex = (currentIndex + 1) % imageList.length
+				renderImage()
+			})
+		}
+
+		const bootCarousel = () => {
+			document
+				.querySelectorAll<HTMLElement>('.juegos__carousel-container')
+				.forEach((container) => initializeCarousel(container))
+		}
+
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', bootCarousel)
+		} else {
+			bootCarousel()
+		}
+	</script>
 </MainLayout>

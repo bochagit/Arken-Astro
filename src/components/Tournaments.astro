@@ -1,0 +1,24 @@
+---
+import { getLangFromUrl, useTranslations, getRelativeLocaleUrl, type Language } from '../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url) as Language
+const t = useTranslations(lang)
+---
+
+<section class="tournaments" id="torneos">
+	<div class="tournaments__text">
+		<h2 class="tournaments__title">{t('tournaments.title')}</h2>
+		<p>
+			{t('tournaments.text1')}
+		</p>
+		<p>
+			{t('tournaments.text2')}
+		</p>
+		<a href={getRelativeLocaleUrl(lang, '/torneos')}>
+			<button class="tournaments__button">{t('tournaments.button')}</button>
+		</a>
+	</div>
+	<div class="tournaments__logo-container">
+		<img src="/Fotos/Tournaments_Banner.png" alt="Arken Games Logo" class="tournaments__logo" />
+	</div>
+</section>
