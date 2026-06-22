@@ -14,10 +14,6 @@
 		"lint:fix": "eslint . --fix"
 	},
 	"dependencies": {
-		"@fullcalendar/core": "6.1.20",
-		"@fullcalendar/daygrid": "6.1.20",
-		"@fullcalendar/google-calendar": "6.1.20",
-		"@fullcalendar/timegrid": "^6.1.21",
 		"astro": "^6.0.7"
 	},
 	"devDependencies": {
