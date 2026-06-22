@@ -5,20 +5,24 @@ const lang = getLangFromUrl(Astro.url) as Language
 const t = useTranslations(lang)
 ---
 
-<section class="tournaments" id="torneos">
-	<div class="tournaments__text">
-		<h2 class="tournaments__title">{t('tournaments.title')}</h2>
-		<p>
-			{t('tournaments.text1')}
-		</p>
-		<p>
-			{t('tournaments.text2')}
-		</p>
+<section id="torneos">
+	<div class="tournaments">
+		<div class="tournaments__text">
+			<h2 class="tournaments__title">{t('tournaments.title')}</h2>
+			<p>
+				{t('tournaments.text1')}
+			</p>
+			<p>
+				{t('tournaments.text2')}
+			</p>
+		</div>
+		<div class="tournaments__logo-container">
+			<img src="/Fotos/Tournaments_Banner.png" alt="Arken Games Logo" class="tournaments__logo" />
+		</div>
+	</div>
+	<div class="tournaments__button-container">
 		<a href={getRelativeLocaleUrl(lang, '/torneos')}>
 			<button class="tournaments__button">{t('tournaments.button')}</button>
 		</a>
-	</div>
-	<div class="tournaments__logo-container">
-		<img src="/Fotos/Tournaments_Banner.png" alt="Arken Games Logo" class="tournaments__logo" />
 	</div>
 </section>

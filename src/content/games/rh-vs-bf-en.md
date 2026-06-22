@@ -12,7 +12,7 @@ gallery:
 relatedGames:
   - 'vol1-en'
   - 'sunrise-en'
-# buyUrl: "https://arkengames.mitiendanube.com/productos/robinhoodvsbigfoot/"
+buyUrl: 'https://arkengames.mitiendanube.com/productos/robinhoodvsbigfoot/'
 ---
 
 **Arken Games** brings this epic clash between legends: the cunning **Robin Hood** against the colossal **Bigfoot**, in a 1v1 asymmetric battle packed with tactics, fun, and miniatures.

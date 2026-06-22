@@ -11,7 +11,7 @@ gallery:
 relatedGames:
   - 'rh-vs-bf-en'
   - 'vol1-en'
-# buyUrl: "https://arkengames.mitiendanube.com/productos/sunrise-sunset/"
+buyUrl: 'https://arkengames.mitiendanube.com/productos/sunrise-sunset/'
 ---
 
 In **Sunrise Sunset**, two gods clash for control of the solar cycle.

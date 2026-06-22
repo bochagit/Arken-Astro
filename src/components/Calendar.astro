@@ -1,80 +1,115 @@
 ---
 interface Props {
-	googleCalendarApiKey: string;
-	googleCalendarId: string;
-	locale?: string;
-	buttonText?: {
-		today?: string;
-		month?: string;
-		week?: string;
-		day?: string;
-	};
+	googleCalendarApiKey: string
+	googleCalendarId: string
+	locale?: string
 }
 
-const {
-	googleCalendarApiKey,
-	googleCalendarId,
-	locale = 'en',
-	buttonText = {
-		today: 'Today',
-		month: 'Month',
-		week: 'Week',
-		day: 'Day'
-	}
-} = Astro.props;
+const { googleCalendarApiKey, googleCalendarId, locale = 'es' } = Astro.props
 ---
 
 <div class="torneos__calendar-layout">
 	<div class="torneos__calendar-copy">
-		<h2 class="torneos__calendar-title">{locale === 'es' ? 'Calendario de torneos' : 'Tournament calendar'}</h2>
-		<p class="torneos__calendar-description">{locale === 'es' ? 'Consultá las próximas fechas de torneos de Unmatched en Argentina. Encontrá sedes, horarios y accedé a la información de cada evento.' : 'Check out the upcoming Unmatched tournament dates in Argentina. Find venues, times, and access information about each event.'}</p>
+		<h2 class="torneos__calendar-title">
+			{locale === 'es' ? 'Próximos torneos' : 'Upcoming tournaments'}
+		</h2>
+
+		<p class="torneos__calendar-description">
+			{
+				locale === 'es'
+					? 'Consultá las próximas fechas de torneos de Unmatched en Argentina.'
+					: 'Check out upcoming Unmatched tournaments in Argentina.'
+			}
+		</p>
 	</div>
 
-	<section class="torneos__calendar" data-google-calendar-api-key={googleCalendarApiKey} data-google-calendar-id={googleCalendarId} data-locale={locale} data-button-text={JSON.stringify(buttonText)}>
-		<div id="fc-calendar"></div>
-	</section>
+	<div id="events-container" class="torneos__events-list">
+		<p>Cargando torneos...</p>
+	</div>
 </div>
 
-<script type="module">
-	import { Calendar } from 'https://esm.sh/@fullcalendar/core@6.1.20';
-	import dayGridPlugin from 'https://esm.sh/@fullcalendar/daygrid@6.1.20';
-	import timeGridPlugin from 'https://esm.sh/@fullcalendar/timegrid@6.1.20';
-	import googleCalendarPlugin from 'https://esm.sh/@fullcalendar/google-calendar@6.1.20';
+<script
+	define:vars={{
+		googleCalendarApiKey,
+		googleCalendarId,
+		locale
+	}}
+>
+	const container = document.getElementById('events-container')
 
-	document.addEventListener('DOMContentLoaded', async () => {
-		const el = document.getElementById('fc-calendar');
-		if (!el) return;
+	async function loadEvents() {
+		try {
+			const now = new Date().toISOString()
 
-		const calendarSection = el.closest('.torneos__calendar');
-		const googleCalendarApiKey = calendarSection?.dataset.googleCalendarApiKey || '';
-		const googleCalendarId = calendarSection?.dataset.googleCalendarId || '';
-		const locale = calendarSection?.dataset.locale || 'en';
-		const buttonText = calendarSection?.dataset.buttonText ? JSON.parse(calendarSection.dataset.buttonText) : undefined;
+			const response = await fetch(
+				`https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(
+					googleCalendarId
+				)}/events?key=${googleCalendarApiKey}&singleEvents=true&orderBy=startTime&timeMin=${now}&maxResults=20`
+			)
 
-		const calendarConfig = {
-			plugins: [dayGridPlugin, timeGridPlugin, googleCalendarPlugin],
-			initialView: 'dayGridMonth',
-			googleCalendarApiKey,
-			events: { googleCalendarId },
-			timeZone: 'America/Argentina/Buenos_Aires',
-			height: 'auto',
-			headerToolbar: { left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay' },
-			buttonText,
-			eventClick(info) {
-				if (info.event.url) {
-					info.jsEvent.preventDefault();
-					window.open(info.event.url, '_blank');
-				}
+			const data = await response.json()
+
+			console.log('Google Calendar Response:', data)
+
+			const events = data.items || []
+
+			if (events.length === 0) {
+				container.innerHTML = '<p>No hay torneos programados.</p>'
+				return
 			}
-		};
 
-		if (locale === 'es') {
-			const esLocale = await import('https://esm.sh/@fullcalendar/core@6.1.20/locales/es.js').then((module) => module.default);
-			calendarConfig.locales = [esLocale];
-			calendarConfig.locale = 'es';
+			container.innerHTML = events
+				.map((event) => {
+					const startDate = event.start?.dateTime || event.start?.date
+
+					const formattedDate = new Date(startDate).toLocaleString(
+						locale === 'es' ? 'es-AR' : 'en-US',
+						{
+							dateStyle: 'full',
+							timeStyle: event.start?.dateTime ? 'short' : undefined
+						}
+					)
+
+					return `
+						<article class="torneos__event-card">
+							<div class="torneos__event-content">
+								<h3 class="torneos__event-title">
+									${event.summary ?? 'Torneo'}
+								</h3>
+
+								<p class="torneos__event-date">
+									${formattedDate}
+								</p>
+
+								${
+									event.location
+										? `
+										<p class="torneos__event-location">
+											${event.location}
+										</p>
+									`
+										: ''
+								}
+							</div>
+
+							<a
+								class="torneos__event-button"
+								href="${event.htmlLink}"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Ver evento
+							</a>
+						</article>
+					`
+				})
+				.join('')
+		} catch (error) {
+			console.error(error)
+
+			container.innerHTML = '<p>Error al cargar los torneos.</p>'
 		}
+	}
 
-		const calendar = new Calendar(el, calendarConfig);
-		calendar.render();
-	});
+	loadEvents()
 </script>

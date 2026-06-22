@@ -480,6 +480,7 @@
 	aspect-ratio: 1 / 2;
 	border-radius: 0.85rem;
 	overflow: hidden;
+	margin: auto;
 	box-shadow: 0 10px 24px #00000080;
 	background: #000;
 }
@@ -496,6 +497,10 @@
 @media screen and (min-width: 721px) {
 	.gallery {
 		width: 60vw;
+	}
+
+	.gallery__video-item {
+		max-width: 30%;
 	}
 
 	.photo__copyright {

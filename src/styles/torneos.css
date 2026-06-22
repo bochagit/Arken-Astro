@@ -396,10 +396,8 @@
 }
 
 .torneos__calendar-layout {
-	display: grid;
-	grid-template-columns: minmax(220px, 32%) minmax(0, 68%);
-	gap: 1.5rem;
-	align-items: start;
+	display: flex;
+	flex-direction: column;
 	margin-top: 2rem;
 }
 
@@ -413,10 +411,11 @@
 
 .torneos__calendar-title {
 	margin: 0;
-	margin-top: 1rem;
+	font-family: 'Spectral SC';
+	font-size: clamp(1.2rem, 1.6vw, 1.8rem);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
 	text-align: left;
-	font-weight: 500;
-	font-size: 1.8rem;
 	color: var(--hunyadi-yellow);
 }
 
@@ -427,142 +426,94 @@
 	line-height: 1.6;
 }
 
-.torneos__calendar #fc-calendar {
-	color: var(--ghost-white);
-	font-family: 'Lora';
-}
-
-.torneos__calendar .fc {
-	--fc-border-color: rgba(255, 255, 255, 0.14);
-	--fc-neutral-bg-color: rgba(255, 255, 255, 0.03);
-	--fc-today-bg-color: rgba(227, 176, 91, 0.16);
-	--fc-list-event-hover-bg-color: rgba(255, 255, 255, 0.06);
-	--fc-event-bg-color: var(--space-cadet);
-	--fc-event-border-color: var(--hunyadi-yellow);
-	--fc-event-text-color: var(--ghost-white);
-	--fc-page-bg-color: transparent;
-}
-
-.torneos__calendar .fc .fc-toolbar {
+.torneos__events-list {
+	display: flex;
+	flex-direction: column;
 	gap: 1rem;
-	margin-bottom: 1.25rem;
-	flex-wrap: wrap;
+	margin-top: 2rem;
+	width: 100%;
 }
 
-.torneos__calendar .fc .fc-toolbar-title {
-	font-family: 'Spectral SC';
-	font-size: clamp(1.25rem, 2vw, 2rem);
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	color: var(--hunyadi-yellow);
+.torneos__event-card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 1.25rem 2rem;
+
+	background: rgba(0, 0, 0, 0.45);
+	border: 1px solid rgba(229, 181, 87, 0.25);
+	border-radius: 10px;
+
+	backdrop-filter: blur(4px);
 }
 
-.torneos__calendar .fc .fc-button {
-	border-radius: 0;
-	border: 1px solid #ffffff26;
-	box-shadow: none;
-	font-family: 'Knockout';
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	background: rgba(255, 255, 255, 0.08);
-	color: var(--ghost-white);
-	transition:
-		background-color 0.2s,
-		color 0.2s,
-		border-color 0.2s,
-		transform 0.2s;
+.torneos__event-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	text-align: left;
+
+	width: 80%;
+	gap: 0.35rem;
 }
 
-.torneos__calendar .fc .fc-button:hover,
-.torneos__calendar .fc .fc-button:focus {
-	background: rgba(227, 176, 91, 0.18);
-	border-color: rgba(227, 176, 91, 0.55);
-	color: var(--ghost-white);
-}
+.torneos__event-title {
+	margin: 0;
 
-.torneos__calendar .fc .fc-button:focus {
-	box-shadow: none;
-}
-
-.torneos__calendar .fc .fc-button-primary:not(:disabled).fc-button-active,
-.torneos__calendar .fc .fc-button-primary:not(:disabled):active {
-	background: var(--hunyadi-yellow);
-	border-color: var(--hunyadi-yellow);
-	color: var(--space-cadet);
-}
-
-.torneos__calendar .fc .fc-button-group {
-	box-shadow: none;
-}
-
-.torneos__calendar .fc .fc-scrollgrid,
-.torneos__calendar .fc .fc-scrollgrid-section > td,
-.torneos__calendar .fc .fc-scrollgrid-section > th,
-.torneos__calendar .fc .fc-daygrid-day,
-.torneos__calendar .fc .fc-col-header-cell {
-	border-color: rgba(255, 255, 255, 0.14);
-}
-
-.torneos__calendar .fc .fc-col-header-cell-cushion,
-.torneos__calendar .fc .fc-daygrid-day-number {
-	color: var(--ghost-white);
-	text-decoration: none;
-	font-family: 'Lora';
-	font-size: 0.95rem;
-	opacity: 0.92;
-}
-
-.torneos__calendar .fc .fc-col-header-cell-cushion {
-	font-family: 'Spectral SC';
-	text-transform: uppercase;
-	letter-spacing: 0.04em;
-}
-
-.torneos__calendar .fc .fc-daygrid-day-top {
-	padding: 0.35rem 0.35rem 0;
-}
-
-.torneos__calendar .fc .fc-daygrid-day-frame {
-	min-height: 3.5rem;
-}
-
-.torneos__calendar .fc .fc-daygrid-day.fc-day-today {
-	background: rgba(227, 176, 91, 0.08);
-}
-
-.torneos__calendar .fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
-	color: var(--hunyadi-yellow);
+	font-size: 1.4rem;
 	font-weight: 700;
+
+	color: var(--ghost-white);
 }
 
-.torneos__calendar .fc .fc-daygrid-event {
-	border-radius: 0;
-	padding: 0.18rem 0.35rem;
-	font-family: 'Lora';
-	font-size: 0.86rem;
-	line-height: 1.25;
-	box-shadow: none;
-}
+.torneos__event-date {
+	margin: 0;
 
-.torneos__calendar .fc .fc-event-title,
-.torneos__calendar .fc .fc-list-event-title,
-.torneos__calendar .fc .fc-list-event-time {
-	color: inherit;
-}
+	font-weight: 700;
+	font-size: 1rem;
 
-.torneos__calendar .fc .fc-daygrid-more-link {
 	color: var(--hunyadi-yellow);
-	font-family: 'Spectral SC';
+}
+
+.torneos__event-location {
+	margin: 0;
+
+	font-size: 0.95rem;
+	opacity: 0.85;
+}
+
+.torneos__event-button {
+	padding: 0.8rem 1.4rem;
+	width: 20%;
+	background: var(--hunyadi-yellow);
+	color: var(--space-cadet);
+
+	font-weight: 700;
 	text-decoration: none;
+	text-transform: uppercase;
+
+	border-radius: 6px;
+
+	transition: 0.2s;
 }
 
-.torneos__calendar .fc .fc-daygrid-more-link:hover {
-	text-decoration: underline;
+.torneos__event-button:hover {
+	transform: translateY(-2px);
 }
 
-.torneos__calendar .fc-theme-standard td,
-.torneos__calendar .fc-theme-standard th {
-	background: transparent;
+@media (max-width: 768px) {
+	.torneos__event-card {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	.torneos__event-button {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 @media screen and (max-width: 720px) {
@@ -622,22 +573,12 @@
 		justify-self: end;
 	}
 
-	.torneos__organiza-section {
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-		padding: 1.5rem 1rem;
-	}
-
 	.torneos__organiza-content {
-		text-align: center;
+		text-align: start;
 	}
 
 	.torneos__organiza-button {
-		align-self: center;
-	}
-	.torneos__carousel-container {
-		gap: 0.5rem;
-		padding: 0 1.5rem;
+		align-self: start;
 	}
 
 	.torneos__carousel-viewer {
@@ -645,11 +586,13 @@
 	}
 
 	.torneos__carousel-arrow--prev {
-		left: -1.8rem;
+		left: 0;
+		background-color: #0006;
 	}
 
 	.torneos__carousel-arrow--next {
-		right: -1.8rem;
+		right: 0;
+		background-color: #0006;
 	}
 
 	.torneos__carousel-arrow {
@@ -694,7 +637,6 @@
 
 	.torneos__wp-banner {
 		margin-top: 3rem;
-		overflow: hidden;
 	}
 
 	.torneos__wp-image {
@@ -710,23 +652,22 @@
 		padding: 0.8rem 1rem;
 		background: transparent;
 		justify-content: center;
-		gap: 0.25rem;
 	}
 
 	.torneos__wp-title {
-		font-size: 0.95rem;
-		line-height: 1.1;
+		font-size: 0.9rem;
+		line-height: 1;
 	}
 
 	.torneos__wp-text-sub {
 		font-size: 0.8rem;
-		line-height: 1.2;
+		line-height: 1;
 		max-width: 24ch;
 	}
 
 	.torneos__wp-text p {
-		font-size: 0.78rem;
-		line-height: 1.2;
+		font-size: 0.6rem;
+		line-height: 1;
 	}
 
 	.torneos__wp-button {
@@ -745,5 +686,19 @@
 	.torneos__wp-button h3 {
 		font-size: 1rem;
 		line-height: 1;
+	}
+}
+
+@media screen and (max-width: 590px) {
+	.torneos__content-image {
+		display: none;
+	}
+
+	.torneos__content-grid {
+		grid-template-areas: 'copy copy';
+	}
+
+	.torneos__content-grid--reverse {
+		grid-template-areas: 'copy copy';
 	}
 }

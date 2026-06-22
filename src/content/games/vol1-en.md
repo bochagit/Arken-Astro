@@ -12,7 +12,7 @@ gallery:
 relatedGames:
   - 'rh-vs-bf-en'
   - 'sunrise-en'
-# buyUrl: "https://arkengames.mitiendanube.com/productos/unmatchedvol1/"
+buyUrl: 'https://arkengames.mitiendanube.com/productos/unmatchedvol1/'
 ---
 
 **Arken Games** presents the first edition of _Unmatched_, an asymmetric miniatures and card game for 2 to 4 players, where legendary heroes from different universes face off in unique and dynamic combat.
