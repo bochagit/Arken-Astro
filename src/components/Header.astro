@@ -20,13 +20,13 @@ const localePath = pathWithoutLocale === '/' ? '' : pathWithoutLocale
 	</label>
 	<nav class="header__nav">
 		<div class="header__nav-group header__nav-group--left">
+			<a href={getRelativeLocaleUrl(lang, '/')} class="header__nav-link">{t('nav.inicio')}</a>
 			<a
 				rel="noopener noreferrer"
 				target="_blank"
 				href="https://tienda.arkengames.com.ar/"
-				class="header__nav-link">{t('nav.tienda')}...</a
+				class="header__nav-link">{t('nav.tienda')}</a
 			>
-			<a href={getRelativeLocaleUrl(lang, '/')} class="header__nav-link">{t('nav.inicio')}</a>
 			<a href={getRelativeLocaleUrl(lang, '/juegos')} class="header__nav-link">{t('nav.juegos')}</a>
 		</div>
 

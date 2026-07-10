@@ -732,24 +732,22 @@ main.slider {
 }
 
 .tournaments__button {
-	width: 60vw;
-	min-width: 700px;
-	height: 60px;
-	background: transparent;
+	max-width: 877px;
+	width: 90vw;
+	height: 50px;
+	background: var(--space-cadet);
 	color: var(--ghost-white);
 	border: none;
-	border-bottom: 1px solid var(--blue-munsell);
-	border-right: 1px solid var(--blue-munsell);
+	border-radius: 4px;
 	font-family: 'Lora';
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	font-weight: 500;
 	transition: all 0.2s ease;
 }
 
 .tournaments__button:hover {
-	font-size: 1.4rem;
-	transform: translateY(-10px);
 	cursor: pointer;
+	background-color: var(--blue-munsell);
 }
 
 @media screen and (max-width: 720px) {
@@ -782,6 +780,10 @@ main.slider {
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 3rem;
+	}
+
+	.tournaments__button {
+		width: 95vw;
 	}
 }
 

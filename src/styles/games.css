@@ -284,7 +284,8 @@
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
-	width: 400px;
+	width: 300px;
+	margin: auto;
 }
 
 .juegos__carousel-viewer {
