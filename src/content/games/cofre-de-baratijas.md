@@ -12,7 +12,10 @@ gallery:
 relatedGames:
   - 'vol1'
   - 'sunrise'
-youtubeUrl: 'https://www.youtube.com/shorts/k5zEqcSVLqU'
+youtubeUrls:
+  - 'https://www.youtube.com/shorts/k5zEqcSVLqU'
+  - 'https://www.youtube.com/shorts/8xiesAp21Kc'
+buyUrl: 'https://tienda.arkengames.com.ar/productos/cofre-de-baratijas/'
 ---
 
 **Arken Games** presenta _Cofre de Baratijas_, un juego familiar de apuestas y colección, donde los jugadores compiten por reunir los conjuntos de tesoros más valiosos.

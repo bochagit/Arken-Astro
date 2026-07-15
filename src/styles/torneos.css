@@ -623,23 +623,6 @@
 		margin-bottom: 1rem;
 	}
 
-	.torneos__calendar .fc .fc-toolbar {
-		gap: 0.75rem;
-	}
-
-	.torneos__calendar .fc .fc-toolbar-title {
-		font-size: 1.1rem;
-	}
-
-	.torneos__calendar .fc .fc-button {
-		padding: 0.4rem 0.7rem;
-		font-size: 0.95rem;
-	}
-
-	.torneos__calendar .fc .fc-daygrid-day-frame {
-		min-height: 4.8rem;
-	}
-
 	.torneos__wp-banner {
 		margin-top: 3rem;
 	}

@@ -450,6 +450,12 @@
 	margin: 0 auto;
 }
 
+.gallery--videos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .gallery img {
 	width: 100%;
 	aspect-ratio: 1 / 1;
