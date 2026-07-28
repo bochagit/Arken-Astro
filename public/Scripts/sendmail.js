@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		emailjs
-			.send('service_ddht0l6', 'template_8mbch1a', parms)
+			.send('service_ud9lpil', 'template_8mbch1a', parms)
 			.then(() => {
 				alert(msgs.success)
 				form.reset()

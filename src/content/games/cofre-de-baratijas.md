@@ -13,7 +13,6 @@ relatedGames:
   - 'vol1'
   - 'sunrise'
 youtubeUrls:
-  - 'https://www.youtube.com/shorts/k5zEqcSVLqU'
   - 'https://www.youtube.com/shorts/8xiesAp21Kc'
 buyUrl: 'https://tienda.arkengames.com.ar/productos/cofre-de-baratijas/'
 ---
