@@ -12,7 +12,9 @@ gallery:
 relatedGames:
   - 'vol1-en'
   - 'sunrise-en'
-youtubeUrl: 'https://www.youtube.com/shorts/N6KB-7KQ21s'
+youtubeUrls:
+  - 'https://www.youtube.com/shorts/N6KB-7KQ21s'
+  - 'https://www.youtube.com/watch?v=jKGgO6kV48A'
 buyUrl: 'https://arkengames.mitiendanube.com/productos/robinhoodvsbigfoot/'
 ---
 

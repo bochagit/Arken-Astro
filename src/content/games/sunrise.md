@@ -11,6 +11,7 @@ gallery:
 relatedGames:
   - 'rh-vs-bf'
   - 'vol1'
+youtubeUrl: 'https://www.youtube.com/watch?v=qRIs3YNcPzQ'
 buyUrl: 'https://arkengames.mitiendanube.com/productos/sunrise-sunset/'
 ---
 
