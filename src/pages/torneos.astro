@@ -13,6 +13,72 @@ import '../styles/torneos.css'
 		<main class="torneos">
 			<section class="torneos__intro">
 				<img src="/Fotos/Torneos_banner.webp" alt="Banner torneos" class="torneos__banner" />
+				<div class="torneos__organiza-section">
+					<div class="torneos__organiza-content">
+						<h2 class="torneos__organiza-title">Organizá torneos oficiales</h2>
+						<p class="torneos__organiza-subtitle">
+							Sumate como anfitrión y forma parte del circuito de Unmatched en Argentina
+						</p>
+						<ul class="torneos__organiza-benefits">
+							<li>Usa formatos oficiales (Conscript, 2vs2, Roster)</li>
+							<li>Difusión en canales de Arken Games</li>
+							<li>Premios oficiales</li>
+							<li>Sumate al crecimiento de la comunidad</li>
+						</ul>
+						<a
+							class="torneos__organiza-button"
+							href="https://forms.gle/V4jsMjKvVyK3xZ5v5"
+							target="_blank"
+							rel="noopener noreferrer">Postularme como anfitrión</a
+						>
+					</div>
+					<div
+						class="torneos__carousel-container"
+						data-carousel-images="/Fotos/Torneos_1.jpg,/Fotos/Torneos_2.jpg,/Fotos/Torneos_3.jpg,/Fotos/Torneos_4.jpg,/Fotos/Torneos_5.jpg,/Fotos/Torneos_6.jpg,/Fotos/Torneos_7.jpg,/Fotos/Torneos_8.jpg"
+					>
+						<button class="torneos__carousel-arrow torneos__carousel-arrow--prev" id="carousel-prev"
+							>‹</button
+						>
+						<div class="torneos__carousel-viewer">
+							<img
+								class="torneos__carousel-image"
+								src="/Fotos/Torneos_1.jpg"
+								alt="Galería anfitrión"
+								data-index="0"
+							/>
+						</div>
+						<button class="torneos__carousel-arrow torneos__carousel-arrow--next" id="carousel-next"
+							>›</button
+						>
+					</div>
+				</div>
+				<div class="torneos__wp-banner">
+					<img
+						class="torneos__wp-image"
+						src="/Fotos/Banner_torneos-WP.png"
+						alt="Unirse al canal de WhatsApp"
+					/>
+					<div class="torneos__wp-text">
+						<h3 class="torneos__wp-title">No te pierdas ningún torneo</h3>
+						<p class="torneos__wp-text-sub">Fechas, cupos y novedades de Unmatched en Argentina</p>
+						<p>Acceso anticipado a lanzamientos</p>
+						<a
+							class="torneos__wp-button"
+							href="https://www.whatsapp.com/channel/0029Vb778MPDuMRbKemcBv2n"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img src="/Fotos/Whatsapp-icon.webp" alt="WhatsApp" />
+							<h3>Unirme al canal de WhatsApp</h3>
+						</a>
+					</div>
+				</div>
+
+				<Calendar
+					googleCalendarApiKey={import.meta.env.PUBLIC_GOOGLE_CALENDAR_API_KEY}
+					googleCalendarId={import.meta.env.PUBLIC_GOOGLE_CALENDAR_ID}
+					locale="es"
+				/>
 				<h2 class="torneos__title">Formatos de torneos</h2>
 				<div class="torneos__accordion">
 					<div class="torneos__item torneos__item--red">
@@ -84,74 +150,6 @@ import '../styles/torneos.css'
 						</div>
 					</div>
 				</div>
-
-				<div class="torneos__wp-banner">
-					<img
-						class="torneos__wp-image"
-						src="/Fotos/Banner_torneos-WP.png"
-						alt="Unirse al canal de WhatsApp"
-					/>
-					<div class="torneos__wp-text">
-						<h3 class="torneos__wp-title">No te pierdas ningún torneo</h3>
-						<p class="torneos__wp-text-sub">Fechas, cupos y novedades de Unmatched en Argentina</p>
-						<p>Acceso anticipado a lanzamientos</p>
-						<a
-							class="torneos__wp-button"
-							href="https://www.whatsapp.com/channel/0029Vb778MPDuMRbKemcBv2n"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img src="/Fotos/Whatsapp-icon.webp" alt="WhatsApp" />
-							<h3>Unirme al canal de WhatsApp</h3>
-						</a>
-					</div>
-				</div>
-
-				<div class="torneos__organiza-section">
-					<div class="torneos__organiza-content">
-						<h2 class="torneos__organiza-title">Organizá torneos oficiales</h2>
-						<p class="torneos__organiza-subtitle">
-							Sumate como anfitrión y forma parte del circuito de Unmatched en Argentina
-						</p>
-						<ul class="torneos__organiza-benefits">
-							<li>Usa formatos oficiales (Conscript, 2vs2, Roster)</li>
-							<li>Difusión en canales de Arken Games</li>
-							<li>Premios oficiales</li>
-							<li>Sumate al crecimiento de la comunidad</li>
-						</ul>
-						<a
-							class="torneos__organiza-button"
-							href="https://forms.gle/V4jsMjKvVyK3xZ5v5"
-							target="_blank"
-							rel="noopener noreferrer">Postularme como anfitrión</a
-						>
-					</div>
-					<div
-						class="torneos__carousel-container"
-						data-carousel-images="/Fotos/Torneos_1.jpg,/Fotos/Torneos_2.jpg,/Fotos/Torneos_3.jpg,/Fotos/Torneos_4.jpg,/Fotos/Torneos_5.jpg,/Fotos/Torneos_6.jpg,/Fotos/Torneos_7.jpg,/Fotos/Torneos_8.jpg"
-					>
-						<button class="torneos__carousel-arrow torneos__carousel-arrow--prev" id="carousel-prev"
-							>‹</button
-						>
-						<div class="torneos__carousel-viewer">
-							<img
-								class="torneos__carousel-image"
-								src="/Fotos/Torneos_1.jpg"
-								alt="Galería anfitrión"
-								data-index="0"
-							/>
-						</div>
-						<button class="torneos__carousel-arrow torneos__carousel-arrow--next" id="carousel-next"
-							>›</button
-						>
-					</div>
-				</div>
-
-				<Calendar
-					googleCalendarApiKey={import.meta.env.PUBLIC_GOOGLE_CALENDAR_API_KEY}
-					googleCalendarId={import.meta.env.PUBLIC_GOOGLE_CALENDAR_ID}
-					locale="es"
-				/>
 			</section>
 		</main>
 		<Footer />
